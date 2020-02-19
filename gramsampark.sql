@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 19, 2020 at 07:08 AM
+-- Generation Time: Feb 19, 2020 at 03:18 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -35,16 +35,17 @@ CREATE TABLE `admin` (
   `email` varchar(50) NOT NULL,
   `phone` varchar(15) NOT NULL,
   `address` varchar(250) NOT NULL,
-  `gpcode` varchar(20) NOT NULL,
-  `designation` varchar(50) NOT NULL
+  `privilege` int(4) NOT NULL,
+  `pcode` varchar(20) NOT NULL,
+  `desig` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`id`, `name`, `gender`, `email`, `phone`, `address`, `gpcode`, `designation`) VALUES
-(1, 'Asha Patil', 'Female', 'ashapatil@gmail.com', '123456789', 'athani', 'ath12', 'comp operator');
+INSERT INTO `admin` (`id`, `name`, `gender`, `email`, `phone`, `address`, `privilege`, `pcode`, `desig`) VALUES
+(1, 'Asha Patil', 'Female', 'ashapatil@gmail.com', '123456789', 'athani', 1, 'ath12', 'comp operator');
 
 -- --------------------------------------------------------
 
@@ -91,7 +92,7 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables
