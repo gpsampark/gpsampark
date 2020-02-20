@@ -35,11 +35,14 @@ $query=mysqli_query($conn, $sql);
                     header('Location:gpadmin/index.php');
                     echo "successful";
                     }
-                    /*else
-                    {
-                      header('Location:student/index.php');
+                    elseif ($privilege==2) {
+                     header('Location:tpadmin/index.php');
                       echo "successful";
-                    }*/
+                    }
+                    else{
+                      header('Location:zpadmin/index.php');
+                      echo "successful";
+                    }
               
               }
 
