@@ -15,7 +15,7 @@
 		 			<span class="icon-bar"></span>
 		 			<span class="icon-bar"></span>
 		 		</button>
-		 		<a class="nabar-brand" href="#"><img src="../img/w3newbie.png">Gram Sampark</a>
+		 		<a class="nabar-brand" href="#"><img src="../img/gpslogo.png"></a>
 		 	</div>
 		 	<div class="collapse navbar-collapse" id="myNavbar">
 		 		<ul class="nav navbar-nav navbar-right">
@@ -25,7 +25,17 @@
 		 			<li><a href="assignpassword.php">Password Permission</a></li>
 		 			<li><a href="#">Update Data</a></li>
 		 			<li><a href="#">View Report</a></li>
-		 			<li><a href="#">Hello User</a></li>
+		 			<li class="dropdown">
+		 				<a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 15px"><b>Hello
+		 					</b>
+		 					<span class="caret"></span>
+		 				</a>
+		 				<ul class="dropdown-menu" style="background-color: transparent;">
+		 					<li><a href="#" style="font-size: 15px"><b>Edit Profile</b></a></li>
+		 					<li><a href="#" style="font-size: 15px"><b>Change Password</b></a></li>
+		 					<li><a href="../index.php" style="font-size: 15px"><span class="glyphicon glyphicon-log-out"></span><b>Logout</b></a></li>
+		 				</ul>
+		 			</li>
 		 		</ul>
 		 	</div>
 		 </div>

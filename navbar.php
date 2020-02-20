@@ -15,11 +15,11 @@
 		 			<span class="icon-bar"></span>
 		 			<span class="icon-bar"></span>
 		 		</button>
-		 		<a class="nabar-brand" href="#"><img src="img/w3newbie.png">Gram Sampark</a>
+		 		<a class="nabar-brand" href="#"><img src="img/gpslogo.png"></a>
 		 	</div>
 		 	<div class="collapse navbar-collapse" id="myNavbar">
 		 		<ul class="nav navbar-nav navbar-right">
-		 			<li class="active"><a href="#">Home</a></li>
+		 			<li class="active"><a href="index.php">Home</a></li>
 		 			<li><a href="#">Gallery</a></li>
 		 			<li><a href="#">Administration</a></li>
 		 			<li><a href="login.php">Login</a></li>
