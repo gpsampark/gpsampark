@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 19, 2020 at 03:18 PM
+-- Generation Time: Feb 20, 2020 at 05:42 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -45,7 +45,10 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `name`, `gender`, `email`, `phone`, `address`, `privilege`, `pcode`, `desig`) VALUES
-(1, 'Asha Patil', 'Female', 'ashapatil@gmail.com', '123456789', 'athani', 1, 'ath12', 'comp operator');
+(1, 'Asha Patil', 'Female', 'ashapatil@gmail.com', '123456789', 'athani', 1, 'ath12', 'comp operator'),
+(6, 'anand', 'Male', 'rc.anandkammar@gmail.com', '7204993889', 'Karajaga						', 1, '1234', 'comp opertr'),
+(8, 'pooja', 'Female', 'abcdef@cd.com', '234756', 'gfh hgvf hjfv vfkuj						', 2, '123456', 'tp head'),
+(9, 'mahesh', 'Male', 'mahesh@gmail.com', '23465875', 'hgskhtjg jhkdgs rhjd rskjhg 						', 3, '65475', 'j hb j');
 
 -- --------------------------------------------------------
 
@@ -65,7 +68,10 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`id`, `username`, `password`, `privilege`) VALUES
-(1, 'asha', 'patil', 1);
+(6, 'anand', 'kammar', 1),
+(1, 'asha', 'patil', 1),
+(9, 'mahesh', '1234', 3),
+(8, 'pooja', '1234', 2);
 
 --
 -- Indexes for dumped tables
@@ -92,7 +98,7 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables
