@@ -16,12 +16,12 @@ $username1=($_POST['username']);
 $sql="select * from admin where id like '".$id1."'";
 $res=mysqli_query($conn,$sql);
 $row1= mysqli_fetch_assoc($res);
-$privilege=$row1['privilege'];
+$privilege1=$row1['privilege'];
 
 if ($_POST['confirm']==$_POST['password']) {
 $password=($_POST['password']);
 
-$query="insert into login(username,password,privilege,id) values('$username1','$password','$privilege','$id1')";
+$query="insert into login(username,password,privilege,id) values('$username1','$password','$privilege1','$id1')";
 
 $res = mysqli_query($conn,$query);
 if(mysqli_affected_rows($conn)>0) {

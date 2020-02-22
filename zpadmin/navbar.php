@@ -7,6 +7,9 @@
 	?>
 </head>
 <body>
+	<?php
+		include ('../config.php');
+	?>
 	<nav class="navbar navbar-inverse">
 		 <div class="container-fluid">
 		 	<div class="navbar-header">
@@ -33,7 +36,7 @@
 		 				<ul class="dropdown-menu" style="background-color: transparent;">
 		 					<li><a href="#" style="font-size: 15px"><b>Edit Profile</b></a></li>
 		 					<li><a href="#" style="font-size: 15px"><b>Change Password</b></a></li>
-		 					<li><a href="../index.php" style="font-size: 15px"><span class="glyphicon glyphicon-log-out"></span><b>Logout</b></a></li>
+		 					<li><a href="logout.php" style="font-size: 15px"><span class="glyphicon glyphicon-log-out"></span><b>Logout</b></a></li>
 		 				</ul>
 		 			</li>
 		 		</ul>
