@@ -10,7 +10,9 @@ $conn = mysqli_connect($servername, $username, $password,$dbname );
 if ($conn->connect_error) {
     die("Connection failed: ");
 }
-session_start();
+if(session_id() == '') {
+    session_start();
+}
 $username=$_SESSION['login_user'];
 $sql="select * from login where username='".$username."'";
 $result= mysqli_query($conn,$sql);
