@@ -26,7 +26,7 @@
 		 			<li><a href="adduser.php">Add User</a></li>
 		 			<li><a href="viewuser.php">View User</a></li>
 		 			<li><a href="assignpassword.php">Password Permission</a></li>
-		 			<li><a href="#">Update Data</a></li>
+		 			<li><a href="addproject.php">Add Project</a></li>
 		 			<li><a href="#">View Report</a></li>
 		 			<li class="dropdown">
 		 				<a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 15px"><b>Hello <?php echo $username; ?>

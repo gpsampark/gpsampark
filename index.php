@@ -4,8 +4,7 @@
 	<title>Gram Sampark</title>
 </head>
 <body>
-	<?php include 'navbar.php'; ?>
-
+	<?php include 'navbar.php';?>
 	<div id="myCarousel" class="carousel slide" data-ride="carousel">
 		<ol class="carousel-indicators">
 			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -37,6 +36,9 @@
 			<span class="sr-only">Next</span>
 		</a>
 	</div>
+	<!-- <div ng-app="" ng-init="myCol='lightblue'">
+	<input style="background-color:{{myCol}}" ng-model="myCol">
+	</div> -->
 	<div class="container text-center">
 		<h2>abcde</h2>
 		<div class="row">

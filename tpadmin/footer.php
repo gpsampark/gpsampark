@@ -13,7 +13,7 @@
 			<a href="#" class="fa fa-linkedin"></a>
 		</div>
 		<div class="col-sm-4">
-			<img src="img/bunny.png" class="icon">
+			<img src="../img/bunny.png" class="icon" alt="logo image file missing">
 		</div>
 	</div>
 </footer>
