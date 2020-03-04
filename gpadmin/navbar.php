@@ -24,7 +24,7 @@
 		 		<ul class="nav navbar-nav navbar-right">
 		 			<li class="active"><a href="index.php">Home</a></li>
 		 			<li><a href="updatedata.php">Update Data</a></li>
-		 			<li><a href="#">View Report</a></li>
+		 			<li><a href="viewreport.php">View Report</a></li>
 		 			<li class="dropdown">
 		 				<a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 15px"><b>Hello <?php echo $username; ?>
 		 					</b>
