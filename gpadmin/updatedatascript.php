@@ -16,20 +16,27 @@ $rem_processing=($_POST['rem_processing']);
 $cur_processing=($_POST['cur_processing']);
 $rem_completed=($_POST['rem_completed']);
 $cur_completed=($_POST['cur_completed']);
-$date=($_POST['date']);
+$month=($_POST['month']);
+$year=($_POST['year']);
 
 $query="select * from admin where id like '".$id."'";
 $sql=mysqli_query($conn,$query);
 $row1= mysqli_fetch_assoc($sql);
 $pcode=$row1['pcode'];
 
-$sql="select * from admin";
-$result=mysqli_query($conn, $sql);
-if ($result-> num_rows >0) {
-	
-}
 
-$query="insert into expenditure(user_id,gp_code,project_id,rem_processing,cur_processing,rem_completed,cur_completed,date) values('$id','$pcode','$project_id','$rem_processing','$cur_processing','$rem_completed','$cur_completed','$date')";
+$sql="select * from expenditure where gp_code='".$pcode."' and project_id='".$project_id."' and month='".$month."' and year='".$year."' ";
+$result=mysqli_query($conn, $sql);
+if ($result-> num_rows >0) { ?>
+	<br><br><br>
+	<div class="alert alert-danger">
+  		<strong>Sorry!</strong> Expenditure for this project is entered.
+  		<meta http-equiv="refresh" content="7;url=index.php" />
+	</div><?php
+
+}
+else{
+	$query="insert into expenditure(user_id,gp_code,project_id,rem_processing,cur_processing,rem_completed,cur_completed,month,year) values('".$id."','".$pcode."','".$project_id."','".$rem_processing."','".$cur_processing."','".$rem_completed."','".$cur_completed."','".$month."','".$year."')";
 $res = mysqli_query($conn,$query);
 if(mysqli_affected_rows($conn)>0) {
 	?><br><br><br>
@@ -49,6 +56,10 @@ else {
 	</div>
 	<?php
 } 
+
+}
+
+
 
 }
 ?>
