@@ -5,7 +5,8 @@
 </head>
 <body>
 	<?php include 'navbar.php';?>
-	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<br>
+	<!-- <div id="myCarousel" class="carousel slide" data-ride="carousel">
 		<ol class="carousel-indicators">
 			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 			<li data-target="#myCarousel" data-slide-to="1"></li>
@@ -36,9 +37,9 @@
 			<span class="sr-only">Next</span>
 		</a>
 	</div>
-	<!-- <div ng-app="" ng-init="myCol='lightblue'">
+	<div ng-app="" ng-init="myCol='lightblue'">
 	<input style="background-color:{{myCol}}" ng-model="myCol">
-	</div> -->
+	</div>
 	<div class="container text-center">
 		<h2>abcde</h2>
 		<div class="row">
@@ -95,7 +96,7 @@
 				<p>edsfghb sdhfg sdh fjv jsdxzfb hgxjh jhvb xcjhvb jhxcv jhsfgah js jfdjh kshbxdv sfd hguy sxzuydvg ugfdsug usdgfvu sd gfuiysgf ugsuy afgg usdy tuuyfsdguygtyuas dufa sgdafyg suydg sdaffsgyugu ag sy afduygyu fsdug uts df gus dfsdaug fug udsfagu fdsu u sdfg ug sadug uysag ufg sugdfug sdug fusa dfu usdf</p>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<?php include 'footer.php'; ?>
 </body>
 </html>

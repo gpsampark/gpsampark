@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>iNFOsHARE</title>
+  <title>Gramsampark | View User</title>
 </head>
 	<body>
 		<?php

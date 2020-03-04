@@ -87,7 +87,7 @@ h1
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="pcode">Panchayat Code:</label>
 					<div class="col-sm-9">
-						<input type="text" style="background-color: transparent; color: white" name="pcode" class="form-control" required="" id="pcode" placeholder="Enter Panchayat Code">
+						<input type="number" style="background-color: transparent; color: white" name="pcode" class="form-control" required="" id="pcode" placeholder="Enter Panchayat Code">
 					</div>
 				</div><br>
 				<div class="form-group">
