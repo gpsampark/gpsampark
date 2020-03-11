@@ -3,11 +3,11 @@
 <head>
   <title>Gramsampark | View User</title>
 </head>
-	<body>
+	<body class="bg">
 		<?php
 			include 'navbar.php';
 		?>
-		<div class="container-fluid" style="background-color: #abcdab">
+		<div class="container-fluid">
 			<div class="container" style="border:solid thin black;border-radius: 10px;">
 				<h2 class="well well-sm" style="background-color:transparent; animation-duration: 3s;text-shadow:1px 1px 0 #444; color: white"><b>User Details</b></h2><br>
 				<!-- <div style="animation-duration: 3s;" class="w3-animate-zoom">-->
@@ -57,17 +57,14 @@
 										}
 										echo "<tr style='background-color:transparent;'><td>".$row["id"]."</td><td>".$ptype."</td><td>".$row["pcode"]."</td><td>".$row["desig"]."</td><td>".$row["name"]."</td><td>".$row["gender"]."</td><td>".$row["email"]."</td><td>".$row["phone"]."</td><td>".$row["address"]."</td></tr>";
 									}
-									echo "</table>";
 								}
 								else
 								{
 									echo "0 result";
 								}
 								$conn-> close();
-							 
 							?>
 						</tbody>
-						
 					</table>
 				</div>
 			</div>

@@ -13,7 +13,6 @@ $query="select * from admin where id like '".$id."'";
 $sql=mysqli_query($conn,$query);
 $row1= mysqli_fetch_assoc($sql);
 
-$pcode=$row1['pcode'];
 $desig=$row1['desig'];
 $name=$row1['name'];
 $gender=$row1['gender'];
@@ -22,7 +21,6 @@ $phone=$row1['phone'];
 $address=$row1['address'];
 
 if (isset($_POST['submit'])) {
-  $pcode=$_POST["pcode"];
   $desig=$_POST["desig"];
   $name = $_POST["name"];
   $gender = $_POST["gender"];
@@ -30,7 +28,7 @@ if (isset($_POST['submit'])) {
   $phone=$_POST["phone"];
   $address=$_POST['address'];
 
-  $query="update admin set pcode='".$pcode."',desig='".$desig."',name='".$name."',gender='".$gender."',email='".$email."',phone='".$phone."',address='".$address."' where admin.id like '".$id."'";
+  $query="update admin set desig='".$desig."',name='".$name."',gender='".$gender."',email='".$email."',phone='".$phone."',address='".$address."' where admin.id like '".$id."'";
 $res = mysqli_query($conn,$query);
 if(mysqli_affected_rows($conn)>0) {
   ?><br>
@@ -75,18 +73,12 @@ h1
 }
 
 </style>
-<body>
+<body class="bg">
   <?php include 'navbar.php'; ?>
-  <div class="container-fluid" style="background-color: #abcdab">
+  <div class="container-fluid">
     <div  class="container" style="width: 70%;background-color: transparent;  color: black; border:solid thin black;border-radius: 10px;">
       <h1 align="center" class="w3-animate-top">Add User Details</h1><br>
       <form  class="form-horizontal w3-animate-zoom" action="editprofile.php" method="POST">
-        <div class="form-group">
-          <label class="control-label col-sm-2" for="pcode">Panchayat Code:</label>
-          <div class="col-sm-9">
-            <input type="text" style="background-color: transparent; color: white" name="pcode" class="form-control" required="" id="pcode" placeholder="Enter Panchayat Code" value="<?php echo "$pcode"; ?>">
-          </div>
-        </div><br>
         <div class="form-group">
           <label class="control-label col-sm-2" for="desig">Designation:</label>
           <div class="col-sm-9">

@@ -22,16 +22,16 @@ h1
 }
 
 </style>
-<body>
+<body class="bg">
 	<?php include 'navbar.php'; ?>
-	<div class="container-fluid" style="background-color: #abcdab">
+	<div class="container-fluid">
 		<div  class="container" style="width: 70%;background-color: transparent;  color: black; border:solid thin black;border-radius: 10px;">
 			<h1 align="center" class="w3-animate-top">Add Expenditure</h1><br>
 			<form  class="form-horizontal w3-animate-zoom" action="updatedatascript.php" method="POST">
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="pid">Select Project</label>
 					<div class="col-sm-9">
-						<select name="pid" class="form-control" id="pid" required="" style="background-color: transparent;">
+						<select name="pid" class="form-control" id="pid" required="" style="background-color: transparent;color: white;">
 							<option disabled selected>Choose Project</option>
 							<?php 
 								ini_set('display_errors', 1);
@@ -63,7 +63,7 @@ h1
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="month">Month:</label>
 					<div class="col-sm-9">
-						<select name="month" class="form-control" id="month" required="" style="background-color: transparent;">
+						<select name="month" class="form-control" id="month" required="" style="background-color: transparent;color: white;">
 							<option disabled selected>Choose Month</option>
 							<option value="1">1</option>
 							<option value="2">2</option>
@@ -83,7 +83,7 @@ h1
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="year">Year:</label>
 					<div class="col-sm-9">
-						<select name="year" class="form-control" id="year" required="" style="background-color: transparent;">
+						<select name="year" class="form-control" id="year" required="" style="background-color: transparent;color: white;">
 							<option disabled selected>Choose Year</option>
 							<option value="2012">2012</option>
 							<option value="2013">2013</option>
@@ -118,26 +118,26 @@ h1
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="rem_processing">Remaining(Cont projects):</label>
 					<div class="col-sm-9">
-						<input type="Number" name="rem_processing" style="background-color: transparent;" class="form-control" required="" id="rem_processing" placeholder="(In Lakhs)Enter expenditure of continued projects still Processing">
+						<input type="Number" name="rem_processing" style="background-color: transparent;color: white;" class="form-control" required="" id="rem_processing" placeholder="(In Lakhs)Enter expenditure of continued projects still Processing">
 					</div>
 				</div><br>
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="cur_processing">Current(New Projects):</label>
 					<div class="col-sm-9">
-						<input type="Number" name="cur_processing" style="background-color: transparent;" class="form-control" required="" id="cur_processing" placeholder="(In Lakhs)Enter expenditure of current projects still Processing">
+						<input type="Number" name="cur_processing" style="background-color: transparent;color: white;" class="form-control" required="" id="cur_processing" placeholder="(In Lakhs)Enter expenditure of current projects still Processing">
 					</div>
 				</div><br>
 				<h2 class="well well-sm" style="background-color:transparent; animation-duration: 3s;text-shadow:1px 1px 0 #444; color: white"><b>Completed</b></h2><br>
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="rem_completed">Remaining(Cont. projects):</label>
 					<div class="col-sm-9">
-						<input type="Number" name="rem_completed" style="background-color: transparent;" class="form-control" required="" id="rem_completed" placeholder="(In Lakhs)Enter expenditure of continued projects Completed">
+						<input type="Number" name="rem_completed" style="background-color: transparent;color: white;" class="form-control" required="" id="rem_completed" placeholder="(In Lakhs)Enter expenditure of continued projects Completed">
 					</div>
 				</div><br>
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="cur_completed">Current(New Projects):</label>
 					<div class="col-sm-9">
-						<input type="Number" name="cur_completed" style="background-color: transparent;" class="form-control" required="" id="phone" placeholder="(In Lakhs)Enter expenditure of current projects Completed">
+						<input type="Number" name="cur_completed" style="background-color: transparent;color: white;" class="form-control" required="" id="phone" placeholder="(In Lakhs)Enter expenditure of current projects Completed">
 					</div>
 				</div><br>
 				<div class="form-group">

@@ -3,18 +3,18 @@
 <head>
   <title>Mock Test | Add Test</title>
 </head>
-<body>
-  <header class="header" style="background-color: #abcdab">
+<body class="bg">
+  <header class="header">
     <?php
       include 'navbar.php';
     ?>
     <div class="container">
-              <h1 align="center" class="w3-animate-top">Add Village Detail</h1><br>
+              <h1 align="center" class="w3-animate-top">ADD VILLAGE DETAILS</h1><br>
               <form  class="form-horizontal w3-animate-zoom" action="addvillagescript.php" method="POST">
                 <div class="form-group">
                    <label class="control-label col-sm-2" for="tp_code">Taluk Code(TP_code):</label>
                        <div class="col-sm-9">
-                  <select name="tp_code" class="form-control" id="tp_code" required="" style="background-color: transparent;">
+                  <select name="tp_code" class="form-control" id="tp_code" required="" style="background-color: transparent;color: white;">
                     <option disabled selected>Choose Taluk</option>
                    <?php 
                     ini_set('display_errors', 1);

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Gramsampark | View Villages</title>
+  <title>Gramsampark | View Projects</title>
 </head>
-	<body>
+	<body class="bg">
 		<?php
 			include 'navbar.php';
 		?>
-		<div class="container-fluid" style="background-color: #abcdab">
+		<div class="container-fluid">
 			<div class="container" style="border:solid thin black;border-radius: 10px;">
-				<h2 class="well well-sm" style="background-color:transparent; animation-duration: 3s;text-shadow:1px 1px 0 #444; color: white"><b>Village List</b></h2><br>
+				<h2 class="well well-sm" style="background-color:transparent; animation-duration: 3s;text-shadow:1px 1px 0 #444; color: white"><b>Project List</b></h2><br>
 				<div class="table-responsive w3-animate-zoom">
 					<table class="table table-striped" style="color: black; font-weight: bold;">
 						<thead>

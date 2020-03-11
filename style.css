@@ -3,6 +3,7 @@ html, body{
 	width: 100%;
 }
 
+
 .navbar{
 	margin-bottom: 0;
 	border-radius: 0;
@@ -102,14 +103,13 @@ footer{
 }
 
 .bg {
-    /* The image used */
-    background-image: url("img/gp5.jpg");
-	  /* Full height */
+
+	background: url(img/gp6.jpg) no-repeat center center fixed;
+	display: table;
+	position: relative;
+	width: 100%;
+	background-size: cover;
+	color: white;
     height: auto; 
     width: 100%;
-	/*padding-top: 8%;*/
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }

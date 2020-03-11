@@ -3,7 +3,7 @@
 <head>
   <title>Gramsampark | View report</title>
 </head>
-	<body>
+	<body class="bg">
 		<?php
 			include 'navbar.php';
 			ini_set('display_errors', 1);
@@ -17,7 +17,7 @@
 				    			die("Connection failed: ");
 								}
 		?>
-		<div class="container-fluid" style="background-color: #abcdab">
+		<div class="container-fluid">
 			<div class="container" style="border:solid thin black;border-radius: 10px;">
 				<form  class="form-horizontal w3-animate-zoom" action="viewreport.php" method="POST">
 
@@ -25,7 +25,7 @@
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="month">Month:</label>
 					<div class="col-sm-9">
-						<select name="month" class="form-control" id="month" required="" style="background-color: transparent;">
+						<select name="month" class="form-control" id="month" required="" style="background-color: transparent;color: white;">
 							<option disabled selected>Choose Month</option>
 							<option value="1">1</option>
 							<option value="2">2</option>
@@ -45,7 +45,7 @@
 					<div class="form-group">
 						<label class="control-label col-sm-2" for="year">Year:</label>
 						<div class="col-sm-9">
-							<select name="year" class="form-control" id="year" required="" style="background-color: transparent;">
+							<select name="year" class="form-control" id="year" required="" style="background-color: transparent;color: white;">
 								<option disabled selected>Choose Year</option>
 								<option value="2012">2012</option>
 								<option value="2013">2013</option>

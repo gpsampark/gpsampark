@@ -18,11 +18,11 @@ h1
 }
 
 </style>
-<body>
+<body class="bg">
 	<?php include 'navbar.php'; ?>
-	<div class="container-fluid" style="background-color: #abcdab">
+	<div class="container-fluid">
 		<div  class="container" style="width: 70%;background-color: transparent;  color: black; border:solid thin black;border-radius: 10px;">
-			<h1 align="center" class="w3-animate-top">Add User Details</h1><br>
+			<h1 align="center" class="w3-animate-top">Add Users Login Credentials</h1><br>
 			<form  class="form-horizontal w3-animate-zoom" action="assignpasswordscript.php" method="POST">
 				
 				<div class="form-group">

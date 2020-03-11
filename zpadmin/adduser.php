@@ -18,16 +18,16 @@ h1
 }
 
 </style>
-<body>
+<body class="bg">
 	<?php include 'navbar.php'; ?>
-	<div class="container-fluid" style="background-color: #abcdab" ng-app="">
+	<div class="container-fluid" ng-app="">
 		<div  class="container" style="width: 70%;background-color: transparent;  color: black; border:solid thin black;border-radius: 10px;">
 			<h1 align="center" class="w3-animate-top">Add User Details</h1><br>
 			<form  class="form-horizontal w3-animate-zoom" action="useradd.php" method="POST">
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="branch">Panchayat Type</label>
 					<div class="col-sm-9">
-						<select name="ptype" class="form-control" id="ptype" required="" style="background-color: transparent;" ng-model="ptype" onchange="send(this.value)">
+						<select name="ptype" class="form-control" id="ptype" required="" style="background-color: transparent;color: white;" ng-model="ptype" onchange="send(this.value)">
 							<option value="" disabled selected> SELECT PANCHAYAT TYPE</option>
 							<option value="gp">Gram Panchayat</option>
 							<option value="tp">Taluk Panchayat</option>
@@ -103,8 +103,7 @@ h1
 					</div>
 				</div><br>
 				<div class="form-group">
-					<label class="control-label col-sm-2" for="Gender">Gender:</label>
-					<div class="container" style="padding-left: 17%">
+					<label class="control-label col-sm-2" for="Gender">Gender:</label><div class="col-sm-9">
 						<label class="radio-inline"><input type="radio" name="gender" value="Male">Male</label>
 						<label class="radio-inline"><input type="radio" name="gender" value="Female">Female</label>
 					</div>
@@ -124,8 +123,7 @@ h1
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="address">Address</label>
 					<div class="col-sm-9">
-						<textarea name="address" style="background-color: transparent;color: white" class="form-control" required="" id="address" placeholder="Enter Your Address">
-						</textarea>
+						<textarea name="address" style="background-color: transparent;color: white" class="form-control" required="" id="address" placeholder="Enter Your Address"></textarea>
 					</div>
 				</div><br>
 				<div class="form-group">
