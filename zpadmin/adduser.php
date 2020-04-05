@@ -16,74 +16,70 @@ h1
   color: #000000;
   font-weight: bold;
 }
-
 </style>
+<script type="text/javascript">
+	function validate()
+	{
+
+		var input = document.getElementById('pcode').value;
+		var aRGEX = /^(([0-9]{10})|([0-9]{4}))$/;
+		var Result = aRGEX.test(input);
+		if (Result == false) {
+			alert("Enter Valid Panchayat Code:"+Result );
+			return Result;
+		}
+
+		var input = document.getElementById('desig').value;
+		var aRGEX = /^[a-zA-Z]{1}[a-zA-Z ]*$/;
+		var Result = aRGEX.test(input);
+		if (Result == false) {
+			alert("Enter Valid Designation:"+Result );
+			return Result;
+		}
+
+		var input = document.getElementById('name').value;
+		var aRGEX = /^[a-zA-Z]{1}[a-zA-Z ]*$/;
+		var Result = aRGEX.test(input);
+		if (Result == false) {
+			alert("Enter Valid Name:"+Result );
+			return Result;
+		}
+
+		var input = document.getElementById('email').value;
+		var aRGEX = /^w+[+.w-]*@([w-]+.)*w+[w-]*.([a-z]{2,4}|d+)$/i;
+		var Result = aRGEX.test(input);
+		if (Result == false) {
+			alert("Enter Valid Email Address:"+Result );
+			return Result;
+		}
+
+		var input = document.getElementById('phone').value;
+		var aRGEX = /^[7-9][0-9]{9}$/;
+		var Result = aRGEX.test(input);
+		if (Result == false) {
+			alert("Enter Valid Phone Number :"+Result );
+			return Result;
+		}		
+	}
+</script>
 <body class="bg">
 	<?php include 'navbar.php'; ?>
 	<div class="container-fluid" ng-app="">
 		<div  class="container" style="width: 70%;background-color: transparent;  color: black; border:solid thin black;border-radius: 10px;">
 			<h1 align="center" class="w3-animate-top">Add User Details</h1><br>
-			<form  class="form-horizontal w3-animate-zoom" action="useradd.php" method="POST">
+			<form  class="form-horizontal w3-animate-zoom" action="useradd.php" method="POST" onsubmit="return validate()">
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="branch">Panchayat Type</label>
 					<div class="col-sm-9">
 						<select name="ptype" class="form-control" id="ptype" required="" style="background-color: transparent;color: white;" ng-model="ptype" onchange="send(this.value)">
 							<option value="" disabled selected> SELECT PANCHAYAT TYPE</option>
-							<option value="gp">Gram Panchayat</option>
-							<option value="tp">Taluk Panchayat</option>
+							<option value="gp">Gram Panchayat</option><!-- 
+							<option value="tp">Taluk Panchayat</option> -->
 							<option value="zp">Zilla Panchayat</option>
 						</select>
 					</div>
 				</div><br>				
-				<!-- <?php 
-    				$ptype="{{ptype}}" ;
-    				echo $ptype;
-					$servername ="localhost";
-					$username= "root";
-					$password= "password";
-					$dbname = "gramsampark";
-					$conn = mysqli_connect($servername, $username, $password,$dbname );
-					if ($conn->connect_error) {
-						die("Connection failed: " .mysqli_connect_error());
-					}
-					if ($ptype=="zp") {
-						echo $ptype;
-						$query="select zp_code,district_name from district_list";
-						$res = mysqli_query($conn,$query);
-						echo $res;
-						if(mysqli_affected_rows($conn)>0) {
-                            echo "<select name='pcode'>";
-                            while ($row = mysqli_fetch_array($res)){
-                                echo "<option value='".$row['zp_code']."'>".$row['district_name'].$row['zp_code']."</option>" ;
-                            }
-                            echo "</select>" ;                     
-						}
-					}
-					elseif ($ptype=="tp") {
-						echo "tp";
-						$query="select tp_code,taluk_name from taluk_list";
-						$res = mysqli_query($conn,$query);
-						if(mysqli_affected_rows($conn)>0) {
-                            echo "<select name='pcode'>";
-                            while ($row = mysqli_fetch_array($res)){
-                                echo "<option value='".$row['tp_code']."'>".$row['taluk_name'].$row['tp_code']."</option>" ;
-                            }
-                            echo "</select>" ;                     
-						}
-					}
-					elseif ($ptype=="gp") {
-						echo "gp";
-						$query="select gp_code,village_name from village_list";
-						$res = mysqli_query($conn,$query);
-						if(mysqli_affected_rows($conn)>0) {
-                            echo "<select name='pcode'>";
-                            while ($row = mysqli_fetch_array($res)){
-                                echo "<option value='".$row['gp_code']."'>".$row['village_name'].$row['gp_code']."</option>" ;
-                            }
-                            echo "</select>" ;                     
-						}
-					}	
-				?> -->
+		
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="pcode">Panchayat Code:</label>
 					<div class="col-sm-9">
@@ -111,13 +107,13 @@ h1
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="email">Email:</label>
 					<div class="col-sm-9">
-						<input type="email" name="email" style="background-color: transparent; color: white" class="form-control" required="" id="email" placeholder="Enter email">
+						<input type="email" name="email" style="background-color: transparent; color: white" class="form-control" required="" id="email" placeholder="Enter email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
 					</div>
 				</div><br>
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="phone">Phone Number:</label>
 					<div class="col-sm-9">
-						<input type="Number" name="phone" style="background-color: transparent; color: white" class="form-control" required="" id="phone" placeholder="Enter Phone Number" pattern="[789][0-9]{9}" value="<?php echo $Phone; ?>">
+						<input type="Number" name="phone" style="background-color: transparent; color: white" class="form-control" required="" id="phone" placeholder="Enter Phone Number">
 					</div>
 				</div><br>
 				<div class="form-group">

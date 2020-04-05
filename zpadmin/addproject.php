@@ -16,14 +16,43 @@ h1
   color: #000000;
   font-weight: bold;
 }
-
 </style>
+<script type="text/javascript">
+  function validate()
+  {
+
+    var input = document.getElementById('slno').value;
+    var aRGEX = /^[1-9]{1}[0-9.a-zA-Z]*$/;
+    var Result = aRGEX.test(input);
+    if (Result == false) {
+      alert("Enter Valid Serial Number:"+Result );
+      return Result;
+    }
+
+    var input = document.getElementById('gp_code').value;
+    var aRGEX = /^[0-9]{10}$/;
+    var Result = aRGEX.test(input);
+    if (Result == false) {
+      alert("Enter Valid GP Code:"+Result );
+      return Result;
+    }
+
+    var input = document.getElementById('pname').value;
+    var aRGEX = /^[a-zA-Z]{1}[a-zA-Z ]*$/;
+    var Result = aRGEX.test(input);
+    if (Result == false) {
+      alert("Enter Valid Project Name:"+Result );
+      return Result;
+    }
+  
+  }
+</script>
 <body class="bg">
 	<?php include 'navbar.php'; ?>
 	<div class="container-fluid">
 		<div  class="container" style="width: 70%;background-color: transparent;  color: black; border:solid thin black;border-radius: 10px;">
 			<h1 align="center" class="w3-animate-top">Add New Project</h1><br>
-			<form  class="form-horizontal w3-animate-zoom" action="addprojectscript.php" method="POST">
+			<form  class="form-horizontal w3-animate-zoom" action="addprojectscript.php" method="POST" onsubmit="return validate()">
 				
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="slno">Serial Number :</label>

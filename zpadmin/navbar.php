@@ -32,7 +32,7 @@
 		 					<li><a href="adduser.php" style="font-size: 15px;color: black;"><b>Add User</b></a></li>
 		 					<li><a href="addtaluk.php" style="font-size: 15px;color: black;"><b>Taluk</b></a></li>
 		 					<li><a href="addvillage.php" style="font-size: 15px;color: black;"><b>Village</b></a></li>
-		 					<li><a href="addproject.php" style="font-size: 15px;color: black;"><b>Project</b></a></li>
+		 					<!-- <li><a href="addproject.php" style="font-size: 15px;color: black;"><b>Project</b></a></li> -->
 		 				</ul>
 		 			</li>
 		 			<li class="dropdown">

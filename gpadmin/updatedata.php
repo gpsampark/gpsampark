@@ -29,38 +29,6 @@ h1
 			<h1 align="center" class="w3-animate-top">Add Expenditure</h1><br>
 			<form  class="form-horizontal w3-animate-zoom" action="updatedatascript.php" method="POST">
 				<div class="form-group">
-					<label class="control-label col-sm-2" for="pid">Select Project</label>
-					<div class="col-sm-9">
-						<select name="pid" class="form-control" id="pid" required="" style="background-color: transparent;color: white;">
-							<option disabled selected>Choose Project</option>
-							<?php 
-								ini_set('display_errors', 1);
-								error_reporting (E_ALL);
-								$servername ="localhost";
-								$username= "root";
-								$password= "password";
-								$dbname = "gramsampark";
-								$conn = mysqli_connect($servername, $username, $password,$dbname );
-								if ($conn->connect_error) {
-				    			die("Connection failed: ");
-								}
-								$sql="select * from project_list where visibility=1 order by pid";
-								$result=mysqli_query($conn, $sql);
-								if ($result-> num_rows >0) {
-									while ($row= $result-> fetch_assoc()) {
-										echo "<option value=".$row["pid"].">".$row["slno"].". ".$row["project_name"]."</ptiion>";
-									}
-								}
-								else
-								{
-									echo "0 result";
-								}
-								$conn-> close();
-							 
-							?>
-						</select>
-					</div><br><br><br>
-				<div class="form-group">
 					<label class="control-label col-sm-2" for="month">Month:</label>
 					<div class="col-sm-9">
 						<select name="month" class="form-control" id="month" required="" style="background-color: transparent;color: white;">
@@ -107,39 +75,59 @@ h1
 						</select>
 					</div>
 				</div><br>
-				
-				
-					<!-- <div class="info">
-					  <p><strong>Info!</strong> Some text...</p>
-					</div> -->
-				</div><br>
-				<h2 class="well well-sm" style="background-color:transparent; animation-duration: 3s;text-shadow:1px 1px 0 #444; color: white"><b>Processing</b></h2><br>
-				
-				<div class="form-group">
-					<label class="control-label col-sm-2" for="rem_processing">Remaining(Cont projects):</label>
-					<div class="col-sm-9">
-						<input type="Number" name="rem_processing" style="background-color: transparent;color: white;" class="form-control" required="" id="rem_processing" placeholder="(In Lakhs)Enter expenditure of continued projects still Processing">
-					</div>
-				</div><br>
-				<div class="form-group">
-					<label class="control-label col-sm-2" for="cur_processing">Current(New Projects):</label>
-					<div class="col-sm-9">
-						<input type="Number" name="cur_processing" style="background-color: transparent;color: white;" class="form-control" required="" id="cur_processing" placeholder="(In Lakhs)Enter expenditure of current projects still Processing">
-					</div>
-				</div><br>
-				<h2 class="well well-sm" style="background-color:transparent; animation-duration: 3s;text-shadow:1px 1px 0 #444; color: white"><b>Completed</b></h2><br>
-				<div class="form-group">
-					<label class="control-label col-sm-2" for="rem_completed">Remaining(Cont. projects):</label>
-					<div class="col-sm-9">
-						<input type="Number" name="rem_completed" style="background-color: transparent;color: white;" class="form-control" required="" id="rem_completed" placeholder="(In Lakhs)Enter expenditure of continued projects Completed">
-					</div>
-				</div><br>
-				<div class="form-group">
-					<label class="control-label col-sm-2" for="cur_completed">Current(New Projects):</label>
-					<div class="col-sm-9">
-						<input type="Number" name="cur_completed" style="background-color: transparent;color: white;" class="form-control" required="" id="phone" placeholder="(In Lakhs)Enter expenditure of current projects Completed">
-					</div>
-				</div><br>
+				<div class="info">
+				  <p><strong>Info!</strong> Enter All The Expenditure of selected Month...</p>
+
+				</div>
+				<div>
+					<?php 
+						ini_set('display_errors', 1);
+						error_reporting (E_ALL);
+						$servername ="localhost";
+						$username= "root";
+						$password= "password";
+						$dbname = "gramsampark";
+						$conn = mysqli_connect($servername, $username, $password,$dbname );
+						if ($conn->connect_error) {
+		    			die("Connection failed: ");
+						}
+						$sql="select * from project_list where visibility=1 order by pid";
+						$result=mysqli_query($conn, $sql);
+						if ($result-> num_rows >0) {
+							while ($row= $result-> fetch_assoc()) {
+								echo "<h4 class='well well-sm' style='background-color:transparent;text-shadow:1px 1px 0 #444; color: white'><b>".$row["slno"]." ".$row["project_name"]."</b></h4>";
+								?>
+								<div class="form-group">
+									<label class="control-label col-sm-2" for="rem_processing">Remaining(Cont projects):</label>
+									<div class="col-sm-4">
+										<input type="Number" name="rem_processing" style="background-color: transparent;color: white;" class="form-control" required="" id="rem_processing" placeholder="Continued projects still Processing">
+									</div>
+									<label class="control-label col-sm-2" for="cur_processing">Current(New Projects):</label>
+									<div class="col-sm-4">
+										<input type="Number" name="cur_processing" style="background-color: transparent;color: white;" class="form-control" required="" id="cur_processing" placeholder="Current projects still Processing">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-sm-2" for="rem_completed">Remaining(Cont. projects):</label>
+									<div class="col-sm-4">
+										<input type="Number" name="rem_completed" style="background-color: transparent;color: white;" class="form-control" required="" id="rem_completed" placeholder="Continued projects Completed">
+									</div>
+									<label class="control-label col-sm-2" for="cur_completed">Current(New Projects):</label>
+									<div class="col-sm-4">
+										<input type="Number" name="cur_completed" style="background-color: transparent;color: white;" class="form-control" required="" id="phone" placeholder="Current projects Completed">
+									</div>
+								</div><br><br>
+								<?php
+							}
+						}
+						else
+						{
+							echo "0 result";
+						}
+						$conn-> close();
+					 
+					?>
+				</div>
 				<div class="form-group">
 					<div class="container" align="center">
 						<button type="submit" class="btn btn-info" name="submit"> Submit</button>

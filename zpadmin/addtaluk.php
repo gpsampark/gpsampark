@@ -3,6 +3,28 @@
 <head>
   <title>Mock Test | Add Test</title>
 </head>
+<script type="text/javascript">
+  function validate()
+  {
+
+    var input = document.getElementById('tp_code').value;
+    var aRGEX = /^[0-9]{7}$/;
+    var Result = aRGEX.test(input);
+    if (Result == false) {
+      alert("Enter Valid Taluk Code:"+Result );
+      return Result;
+    }
+
+    var input = document.getElementById('taluk_name').value;
+    var aRGEX = /^[a-zA-Z]{1}[a-zA-Z ]*$/;
+    var Result = aRGEX.test(input);
+    if (Result == false) {
+      alert("Enter Valid Taluk Name:"+Result );
+      return Result;
+    }
+  
+  }
+</script>
 <body class="bg">
   <header class="header">
     <?php
@@ -10,7 +32,7 @@
     ?>
     <div class="container">
               <h1 align="center" class="w3-animate-top">Add Taluk Detail</h1><br>
-              <form  class="form-horizontal w3-animate-zoom" action="addtalukscript.php" method="POST">
+              <form  class="form-horizontal w3-animate-zoom" action="addtalukscript.php" method="POST" onsubmit="return validate()">
                 <div class="form-group">
                    <label class="control-label col-sm-2" for="zp_code">District Code(ZP_code):</label>
                        <div class="col-sm-9">
