@@ -82,13 +82,13 @@ h1
         <div class="form-group">
           <label class="control-label col-sm-2" for="desig">Designation:</label>
           <div class="col-sm-9">
-            <input type="text" name="desig" style="background-color: transparent; color: white" class="form-control" id="desig" placeholder="Enter Designation" required="" value="<?php echo "$desig"; ?>">
+            <input type="text" name="desig" style="background-color: transparent;" class="form-control" id="desig" placeholder="Enter Designation" required="" value="<?php echo "$desig"; ?>">
           </div>
         </div><br>
         <div class="form-group">
           <label class="control-label col-sm-2" for="name">Name:</label>
           <div class="col-sm-9">
-            <input type="text" name="name" style="background-color: transparent; color: white" class="form-control" id="name" placeholder="Enter Name" required="" value="<?php echo "$name"; ?>">
+            <input type="text" name="name" style="background-color: transparent;" class="form-control" id="name" placeholder="Enter Name" required="" value="<?php echo "$name"; ?>">
           </div>
         </div><br>
         <div class="form-group">
@@ -101,19 +101,19 @@ h1
         <div class="form-group">
           <label class="control-label col-sm-2" for="email">Email:</label>
           <div class="col-sm-9">
-            <input type="email" name="email" style="background-color: transparent; color: white" class="form-control" required="" id="email" placeholder="Enter email" value="<?php echo "$email"; ?>">
+            <input type="email" name="email" style="background-color: transparent;" class="form-control" required="" id="email" placeholder="Enter email" value="<?php echo "$email"; ?>">
           </div>
         </div><br>
         <div class="form-group">
           <label class="control-label col-sm-2" for="phone">Phone Number:</label>
           <div class="col-sm-9">
-            <input type="Number" name="phone" style="background-color: transparent; color: white" class="form-control" required="" id="phone" placeholder="Enter Phone Number" pattern="[789][0-9]{9}" value="<?php echo $phone; ?>">
+            <input type="Number" name="phone" style="background-color: transparent;" class="form-control" required="" id="phone" placeholder="Enter Phone Number" pattern="[789][0-9]{9}" value="<?php echo $phone; ?>">
           </div>
         </div><br>
         <div class="form-group">
           <label class="control-label col-sm-2" for="address">Address</label>
           <div class="col-sm-9">
-            <textarea name="address" style="background-color: transparent;color: white" class="form-control" required="" id="address" placeholder="Enter Your Address"><?php echo $address; ?>
+            <textarea name="address" style="background-color: transparent;" class="form-control" required="" id="address" placeholder="Enter Your Address"><?php echo $address; ?>
             </textarea>
           </div>
         </div><br>

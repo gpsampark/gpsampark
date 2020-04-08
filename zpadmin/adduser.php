@@ -45,16 +45,16 @@ h1
 			return Result;
 		}
 
-		var input = document.getElementById('email').value;
+		/*var input = document.getElementById('email').value;
 		var aRGEX = /^w+[+.w-]*@([w-]+.)*w+[w-]*.([a-z]{2,4}|d+)$/i;
 		var Result = aRGEX.test(input);
 		if (Result == false) {
 			alert("Enter Valid Email Address:"+Result );
 			return Result;
-		}
+		}*/
 
 		var input = document.getElementById('phone').value;
-		var aRGEX = /^[7-9][0-9]{9}$/;
+		var aRGEX = /^[6-9][0-9]{9}$/;
 		var Result = aRGEX.test(input);
 		if (Result == false) {
 			alert("Enter Valid Phone Number :"+Result );
@@ -71,7 +71,7 @@ h1
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="branch">Panchayat Type</label>
 					<div class="col-sm-9">
-						<select name="ptype" class="form-control" id="ptype" required="" style="background-color: transparent;color: white;" ng-model="ptype" onchange="send(this.value)">
+						<select name="ptype" class="form-control" id="ptype" required="" style="background-color: transparent;" ng-model="ptype" onchange="send(this.value)">
 							<option value="" disabled selected> SELECT PANCHAYAT TYPE</option>
 							<option value="gp">Gram Panchayat</option><!-- 
 							<option value="tp">Taluk Panchayat</option> -->
@@ -83,19 +83,19 @@ h1
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="pcode">Panchayat Code:</label>
 					<div class="col-sm-9">
-						<input type="number" style="background-color: transparent; color: white" name="pcode" class="form-control" required="" id="pcode" placeholder="Enter Panchayat Code">
+						<input type="number" style="background-color: transparent;" name="pcode" class="form-control" required="" id="pcode" placeholder="Enter Panchayat Code">
 					</div>
 				</div><br>
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="desig">Designation:</label>
 					<div class="col-sm-9">
-						<input type="text" name="desig" style="background-color: transparent; color: white" class="form-control" id="desig" placeholder="Enter Designation" required="">
+						<input type="text" name="desig" style="background-color: transparent;" class="form-control" id="desig" placeholder="Enter Designation" required="">
 					</div>
 				</div><br>
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="name">Name:</label>
 					<div class="col-sm-9">
-						<input type="text" name="name" style="background-color: transparent; color: white" class="form-control" id="name" placeholder="Enter Name" required="">
+						<input type="text" name="name" style="background-color: transparent;" class="form-control" id="name" placeholder="Enter Name" required="">
 					</div>
 				</div><br>
 				<div class="form-group">
@@ -107,19 +107,19 @@ h1
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="email">Email:</label>
 					<div class="col-sm-9">
-						<input type="email" name="email" style="background-color: transparent; color: white" class="form-control" required="" id="email" placeholder="Enter email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+						<input type="email" name="email" style="background-color: transparent;" class="form-control" required="" id="email" placeholder="Enter email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
 					</div>
 				</div><br>
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="phone">Phone Number:</label>
 					<div class="col-sm-9">
-						<input type="Number" name="phone" style="background-color: transparent; color: white" class="form-control" required="" id="phone" placeholder="Enter Phone Number">
+						<input type="Number" name="phone" style="background-color: transparent;" class="form-control" required="" id="phone" placeholder="Enter Phone Number">
 					</div>
 				</div><br>
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="address">Address</label>
 					<div class="col-sm-9">
-						<textarea name="address" style="background-color: transparent;color: white" class="form-control" required="" id="address" placeholder="Enter Your Address"></textarea>
+						<textarea name="address" style="background-color: transparent;" class="form-control" required="" id="address" placeholder="Enter Your Address"></textarea>
 					</div>
 				</div><br>
 				<div class="form-group">

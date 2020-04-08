@@ -57,19 +57,19 @@ h1
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="slno">Serial Number :</label>
 					<div class="col-sm-9">
-						<input type="text" style="background-color: transparent; color: white" name="slno" class="form-control" required="" id="slno" placeholder="Enter Full Serial Number(eg. 1 or 1a)">
+						<input type="text" style="background-color: transparent;" name="slno" class="form-control" required="" id="slno" placeholder="Enter Full Serial Number(eg. 1 or 1a)">
 					</div>
 				</div><br>
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="pname">Project Name :</label>
 					<div class="col-sm-9">
-						<input type="text" name="pname" style="background-color: transparent; color: white" class="form-control" id="pname" placeholder="Enter New Project Name" required="">
+						<input type="text" name="pname" style="background-color: transparent;" class="form-control" id="pname" placeholder="Enter New Project Name" required="">
 					</div>
 				</div><br>
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="vilibility">Visibility :</label>
 					<div class="col-sm-9">
-						<input type="number" name="visibility" style="background-color: transparent; color: white" class="form-control" id="visibility" placeholder="Enter visibility(if main project name 1 otherwise 0)" required="">
+						<input type="number" name="visibility" style="background-color: transparent;" class="form-control" id="visibility" placeholder="Enter visibility(if main project name 1 otherwise 0)" required="">
 					</div>
 				</div><br>
 				

@@ -21,11 +21,11 @@
 			<div class="container" style="border:solid thin black;border-radius: 10px;">
 				<form  class="form-horizontal w3-animate-zoom" action="viewreport.php" method="POST">
 
-				<h2 class="well well-sm" style="background-color:transparent; animation-duration: 3s;text-shadow:1px 1px 0 #444; color: white;text-align: center;"><b>MONTHLY EXPENDITURE</b></h2><br>
+				<h2 class="well well-sm" style="background-color:transparent; animation-duration: 3s;text-shadow:1px 1px 0 #444;text-align: center;"><b>MONTHLY EXPENDITURE</b></h2><br>
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="month">Month:</label>
 					<div class="col-sm-9">
-						<select name="month" class="form-control" id="month" required="" style="background-color: transparent;color: white;">
+						<select name="month" class="form-control" id="month" required="" style="background-color: transparent;">
 							<option disabled selected>Choose Month</option>
 							<option value="1">1</option>
 							<option value="2">2</option>
@@ -45,7 +45,7 @@
 					<div class="form-group">
 						<label class="control-label col-sm-2" for="year">Year:</label>
 						<div class="col-sm-9">
-							<select name="year" class="form-control" id="year" required="" style="background-color: transparent;color: white;">
+							<select name="year" class="form-control" id="year" required="" style="background-color: transparent;">
 								<option disabled selected>Choose Year</option>
 								<option value="2012">2012</option>
 								<option value="2013">2013</option>
@@ -72,7 +72,7 @@
 					<div class="form-group">
 						<label class="control-label col-sm-2" for="gp_code">Panchayat Code:</label>
 						<div class="col-sm-9">
-							<input type="number" style="background-color: transparent; color: white" name="gp_code" class="form-control" required="" id="gp_code" placeholder="Enter Panchayat Code">
+							<input type="number" style="background-color: transparent;" name="gp_code" class="form-control" required="" id="gp_code" placeholder="Enter Panchayat Code">
 						</div>
 					</div><br>
 					<div class="form-group">

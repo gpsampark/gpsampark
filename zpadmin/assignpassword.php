@@ -28,25 +28,25 @@ h1
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="id">ID</label>
 					<div class="col-sm-9">
-						<input type="text" style="background-color: transparent; color: white" name="id" class="form-control" required="" id="id" placeholder="Enter User Id">
+						<input type="text" style="background-color: transparent;" name="id" class="form-control" required="" id="id" placeholder="Enter User Id">
 					</div>
 				</div><br>
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="username">Username:</label>
 					<div class="col-sm-9">
-						<input type="text" name="username" style="background-color: transparent; color: white" class="form-control" id="username" placeholder="Enter New Username" required="">
+						<input type="text" name="username" style="background-color: transparent;" class="form-control" id="username" placeholder="Enter New Username" required="">
 					</div>
 				</div><br>
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="password">Password:</label>
 					<div class="col-sm-9">
-						<input type="password" name="password" style="background-color: transparent; color: white" class="form-control" id="password" placeholder="Enter New Password" required="">
+						<input type="password" name="password" style="background-color: transparent;" class="form-control" id="password" placeholder="Enter New Password" required="">
 					</div>
 				</div><br>
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="confirm"> Confirm Password:</label>
 					<div class="col-sm-9">
-						<input type="password" name="confirm" style="background-color: transparent; color: white" class="form-control" id="confirm" placeholder="Confirm Password" required="">
+						<input type="password" name="confirm" style="background-color: transparent;" class="form-control" id="confirm" placeholder="Confirm Password" required="">
 					</div>
 				</div><br>				
 				<div class="form-group">

@@ -7,10 +7,11 @@ html, body{
 .navbar{
 	margin-bottom: 0;
 	border-radius: 0;
-	background-color: #5e4485;
+	background-color: #9D9EFF;
 	color: #ffffff;
 	padding: 1% 0;
 	font-size: 1.2em;
+	font-weight: bold;
 	border: 0;
 }
 
@@ -22,11 +23,12 @@ html, body{
 
 .navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a:focus, .navbar-inverse .navbar-nav .active a:hover{
 	color: #ffffff;
-	background-color: #5e4485;
+	/*background-color: #5e4485;*/
+	background-color: #9D9EFF;
 }
 
 .navbar-inverse .navbar-nav li a {
-	color: #d5d5d5
+	color: #d5d5d5;
 }
 
 .carousel-caption{
@@ -66,7 +68,7 @@ html, body{
 
 footer{
 	width: 100%;
-	background-color: #5e4485;
+	background-color: #9D9EFF;
 	padding: 1%;
 	color: #ffffff;
 }
@@ -103,13 +105,10 @@ footer{
 }
 
 .bg {
-
-	background: url(img/gp6.jpg) no-repeat center center fixed;
 	display: table;
 	position: relative;
 	width: 100%;
 	background-size: cover;
-	color: white;
     height: auto; 
     width: 100%;
 }

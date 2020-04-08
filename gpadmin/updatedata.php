@@ -31,7 +31,7 @@ h1
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="month">Month:</label>
 					<div class="col-sm-9">
-						<select name="month" class="form-control" id="month" required="" style="background-color: transparent;color: white;">
+						<select name="month" class="form-control" id="month" required="" style="background-color: transparent;">
 							<option disabled selected>Choose Month</option>
 							<option value="1">1</option>
 							<option value="2">2</option>
@@ -51,7 +51,7 @@ h1
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="year">Year:</label>
 					<div class="col-sm-9">
-						<select name="year" class="form-control" id="year" required="" style="background-color: transparent;color: white;">
+						<select name="year" class="form-control" id="year" required="" style="background-color: transparent;">
 							<option disabled selected>Choose Year</option>
 							<option value="2012">2012</option>
 							<option value="2013">2013</option>
@@ -96,26 +96,26 @@ h1
 						if ($result-> num_rows >0) {
 							$i = 1;
 							while ($row= $result-> fetch_assoc()) {
-								echo "<h4 class='well well-sm' style='background-color:transparent;text-shadow:1px 1px 0 #444; color: white'><b>".$row["slno"]." ".$row["project_name"]."</b></h4>";
+								echo "<h4 class='well well-sm' style='background-color:transparent;text-shadow:1px 1px 0 #444;'><b>".$row["slno"]." ".$row["project_name"]."</b></h4>";
 								?>
 								<div class="form-group">
 									<label class="control-label col-sm-2" for="rem_processing">Remaining(Cont projects):</label>
 									<div class="col-sm-4">
-										<input type="Number" name="rem_processing[<?php echo $i; ?>]" style="background-color: transparent;color: white;" class="form-control" required="" id="rem_processing[<?php echo $i; ?>]" placeholder="Continued projects still Processing">
+										<input type="Number" name="rem_processing[<?php echo $i; ?>]" style="background-color: transparent;" class="form-control" required="" id="rem_processing[<?php echo $i; ?>]" placeholder="Continued projects still Processing">
 									</div>
 									<label class="control-label col-sm-2" for="cur_processing">Current(New Projects):</label>
 									<div class="col-sm-4">
-										<input type="Number" name="cur_processing[<?php echo $i; ?>]" style="background-color: transparent;color: white;" class="form-control" required="" id="cur_processing[<?php echo $i; ?>]" placeholder="Current projects still Processing">
+										<input type="Number" name="cur_processing[<?php echo $i; ?>]" style="background-color: transparent;" class="form-control" required="" id="cur_processing[<?php echo $i; ?>]" placeholder="Current projects still Processing">
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-sm-2" for="rem_completed">Remaining(Cont. projects):</label>
 									<div class="col-sm-4">
-										<input type="Number" name="rem_completed[<?php echo $i; ?>]" style="background-color: transparent;color: white;" class="form-control" required="" id="rem_completed[<?php echo $i; ?>]" placeholder="Continued projects Completed">
+										<input type="Number" name="rem_completed[<?php echo $i; ?>]" style="background-color: transparent;" class="form-control" required="" id="rem_completed[<?php echo $i; ?>]" placeholder="Continued projects Completed">
 									</div>
 									<label class="control-label col-sm-2" for="cur_completed">Current(New Projects):</label>
 									<div class="col-sm-4">
-										<input type="Number" name="cur_completed[<?php echo $i; ?>]" style="background-color: transparent;color: white;" class="form-control" required="" id="cur_completed[<?php echo $i; ?>]" placeholder="Current projects Completed">
+										<input type="Number" name="cur_completed[<?php echo $i; ?>]" style="background-color: transparent;" class="form-control" required="" id="cur_completed[<?php echo $i; ?>]" placeholder="Current projects Completed">
 									</div>
 								</div><br><br>
 								<?php

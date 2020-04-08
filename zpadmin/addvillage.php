@@ -36,7 +36,7 @@
                 <div class="form-group">
                    <label class="control-label col-sm-2" for="tp_code">Taluk Code(TP_code):</label>
                        <div class="col-sm-9">
-                  <select name="tp_code" class="form-control" id="tp_code" required="" style="background-color: transparent;color: white;">
+                  <select name="tp_code" class="form-control" id="tp_code" required="" style="background-color: transparent;">
                     <option disabled selected>Choose Taluk</option>
                    <?php 
                     ini_set('display_errors', 1);

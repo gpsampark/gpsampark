@@ -78,8 +78,6 @@ else {
 }
 .bg {
     /* The image used */
-    background-image: url("../img/general.jpg");
-
     /* Full height */
     height: auto; 
     width: 100%;
@@ -96,26 +94,26 @@ else {
 include('navbar.php');
 ?>
 <div class="content w3-animate-top " style="padding-top: 2%">
-<div class="w3-card-4" style="padding-top: 8%;border:solid thin black;border-radius: 10px;border-color: green;box-shadow: 1px 1px 90px #fff;">
+<div class="w3-card-4" style="padding-top: 8%;border:solid thin black;border-radius: 10px;border-color: green;box-shadow: 1px 1px 90px #000;">
   <div class="w3-container" align="center">
-    <h2><b style="color: #ffffff">Change Password</b></h2><br><br>
+    <h2><b>Change Password</b></h2><br><br>
   </div>
 
   <form action="changepassword.php" method="POST">
   <div class="input-group" style="padding-left: 25px;padding-right: 25px">
     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-    <input  type="text" class="form-control input-lg" name="username" placeholder="Username" id="username" required="" style="background-color: transparent; color: white" value="<?php echo "$username"; ?>">
+    <input  type="text" class="form-control input-lg" name="username" placeholder="Username" id="username" required="" style="background-color: transparent;" value="<?php echo "$username"; ?>">
 </div><br><br>
 
   <div class="input-group" style="padding-left: 25px;padding-right: 25px">
     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-    <input id="password" type="password" class="form-control input-lg" name="password"  placeholder="Password" required="" style="background-color: transparent; color: white">
+    <input id="password" type="password" class="form-control input-lg" name="password"  placeholder="Password" required="" style="background-color: transparent;">
   </div><br><br>
 
 
    <div class="input-group" style="padding-left: 25px;padding-right: 25px">
     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-    <input id="confirm" type="password" class="form-control input-lg" name="confirm"  placeholder="Confirm Password" required="" style="background-color: transparent; color: white">
+    <input id="confirm" type="password" class="form-control input-lg" name="confirm"  placeholder="Confirm Password" required="" style="background-color: transparent;">
   </div><br><br>
   <div align="center">
     <button class="btn btn-primary btn-lg" name="submit" type="submit">Submit</button><br><br><br>

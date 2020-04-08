@@ -21,11 +21,11 @@
 								$row1= $result1-> fetch_assoc();
 								$gp_code=$row1['gp_code'];
 		?>
-		<div class="container-fluid" style="background-color: #abcdab">
+		<div class="container-fluid">
 			<div class="container" style="border:solid thin black;border-radius: 10px;">
 				<form  class="form-horizontal w3-animate-zoom" action="viewreport.php" method="POST">
 
-				<h2 class="well well-sm" style="background-color:transparent; animation-duration: 3s;text-shadow:1px 1px 0 #444; color: white;text-align: center;"><b>MONTHLY EXPENDITURE</b></h2><br>
+				<h2 class="well well-sm" style="background-color:transparent; animation-duration: 3s;text-shadow:1px 1px 0 #444;text-align: center;"><b>MONTHLY EXPENDITURE</b></h2><br>
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="month">Month:</label>
 					<div class="col-sm-9">

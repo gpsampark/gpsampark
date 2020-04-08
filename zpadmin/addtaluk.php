@@ -36,7 +36,7 @@
                 <div class="form-group">
                    <label class="control-label col-sm-2" for="zp_code">District Code(ZP_code):</label>
                        <div class="col-sm-9">
-                  <select name="zp_code" class="form-control" id="zp_code" required="" style="background-color: transparent;color: white;">
+                  <select name="zp_code" class="form-control" id="zp_code" required="" style="background-color: transparent;">
                     <option disabled selected>Choose District</option>
                    <?php 
                     ini_set('display_errors', 1);
@@ -67,13 +67,13 @@
                    <div class="form-group">
                   <label class="control-label col-sm-2" for="tp_code">Taluk Code:</label>
                   <div class="col-sm-9">
-                    <input type="text" name="tp_code" style="background-color: transparent;color: white;" class="form-control" id="tp_code" placeholder="Enter Taluk Code(tp_code)" required="">
+                    <input type="text" name="tp_code" style="background-color: transparent;" class="form-control" id="tp_code" placeholder="Enter Taluk Code(tp_code)" required="">
                   </div>
                 </div><br>
                   <div class="form-group">
                   <label class="control-label col-sm-2" for="taluk_name">Taluk Name:</label>
                   <div class="col-sm-9">
-                    <input type="text" name="taluk_name" style="background-color: transparent;color: white;" class="form-control" id="taluk_name" placeholder="Enter Taluk Name" required="">
+                    <input type="text" name="taluk_name" style="background-color: transparent;" class="form-control" id="taluk_name" placeholder="Enter Taluk Name" required="">
                   </div>
                 </div><br>
                 <div class="form-group">

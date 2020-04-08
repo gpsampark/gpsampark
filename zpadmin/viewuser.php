@@ -9,7 +9,7 @@
 		?>
 		<div class="container-fluid">
 			<div class="container" style="border:solid thin black;border-radius: 10px;">
-				<h2 class="well well-sm" style="background-color:transparent; animation-duration: 3s;text-shadow:1px 1px 0 #444; color: white"><b>User Details</b></h2><br>
+				<h2 class="well well-sm" style="background-color:transparent; animation-duration: 3s;text-shadow:1px 1px 0 #fff;"><b>User Details</b></h2><br>
 				<!-- <div style="animation-duration: 3s;" class="w3-animate-zoom">-->
 				<div class="table-responsive w3-animate-zoom">
 					<table class="table table-striped" style="color: black; font-weight: bold;">
