@@ -35,6 +35,29 @@
 			<label>dist :</label><br>
 			<select name="dist" id="dist" onChange="gettaluk(this.value);">
 				<option value="" disabled selected="">Select District</option>
+				<?php 
+                    ini_set('display_errors', 1);
+                    error_reporting (E_ALL);
+                    $servername ="localhost";
+                    $username= "root";
+                    $password= "password";
+                    $dbname = "gramsampark";
+                    $conn = mysqli_connect($servername, $username, $password,$dbname );
+                    if ($conn->connect_error) {
+                      die("Connection failed: ");
+                    }
+                    $sql="select * from district_list order by zp_code";
+                    $result=mysqli_query($conn, $sql);
+                    if ($result-> num_rows >0) {
+                      while ($row= $result-> fetch_assoc()) {
+                        echo "<option value=".$row["zp_code"].">".$row["zp_code"].". ".$row["district_name"]."</option>";
+                      }
+                    }
+                    else{
+                      echo "0 result";
+                    }
+                    $conn-> close();
+                  ?>
 			</select>
 		</div>
 
