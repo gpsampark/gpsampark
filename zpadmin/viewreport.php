@@ -3,6 +3,7 @@
 <head>
   <title>Gramsampark | View report</title>
 </head>
+
 	<body class="bg">
 		<?php
 			include 'navbar.php';
@@ -69,12 +70,49 @@
 							</select>
 						</div>
 					</div>
-					<div class="form-group">
+					<!-- <div class="form-group">
 						<label class="control-label col-sm-2" for="gp_code">Panchayat Code:</label>
 						<div class="col-sm-9">
 							<input type="number" style="background-color: transparent;" name="gp_code" class="form-control" required="" id="gp_code" placeholder="Enter Panchayat Code">
 						</div>
-					</div><br>
+					</div><br> -->
+					<div class="panel-body">
+						<div class="form-group">
+							<label for="title">Select Taluk:</label>
+							<select name="taluk" class="form-control">
+								<option value="">--- Select Taluk ---</option>
+									<?php
+										ini_set('display_errors', 1);
+										error_reporting (E_ALL);
+				                        $servername ="localhost";
+				                        $username= "root";
+				                        $password= "password";
+				                        $dbname = "gramsampark";
+
+				                        $conn = mysqli_connect($servername, $username, $password,$dbname );
+				                        if ($conn->connect_error) {
+				                        die("Connection failed: ");
+				                        }
+
+				                        $sql = "SELECT * FROM taluk_list order by tp_code"; 
+
+				                        $result = $conn->query($sql);
+
+				                        while($row = $result->fetch_assoc()){
+
+				                            echo "<option value='".$row['tp_code']."'>".$row['taluk_name']."</option>";
+
+				                        }
+				                    ?>
+				            </select>
+				        </div>
+				        <div class="form-group">
+				        	<label for="title">Select Village:</label>
+			        		<select name="gp_code" class="form-control" style="width:350px">
+			        			
+			        		</select>
+				        </div>
+				    </div>
 					<div class="form-group">
 		                <div class="container" align="center">
 		                 	<button type="submit" class="btn btn-info" name="submit">View</button>
@@ -117,6 +155,48 @@
 				</form>
 			</div>
 		</div>
+		<script>
+
+$( "select[name='taluk']" ).change(function () {
+
+    var tp_code = $(this).val();
+
+
+    if(tp_code) {
+
+
+        $.ajax({
+
+            url: "ajaxpro.php",
+
+            dataType: 'Json',
+
+            data: {'tp_code':tp_code},
+
+            success: function(data) {
+
+                $('select[name="gp_code"]').empty();
+
+                $.each(data, function(key, value) {
+
+                    $('select[name="gp_code"]').append('<option value="'+ key +'">'+ key +". "+ value +'</option>');
+
+                });
+
+            }
+
+        });
+
+
+    }else{
+
+        $('select[name="gp_code"]').empty();
+
+    }
+
+});
+
+</script>
 		<?php include 'footer.php'; ?>
 	</body>
 </html>
