@@ -30,6 +30,9 @@ elseif ($ptype=="tp") {
 elseif ($ptype=="zp") {
 	$privilege=3;
 }
+elseif ($ptype=="ad") {
+	$privilege=4;
+}
 else{
 	header("location:useradd.php?error=".$ptype."");
 }

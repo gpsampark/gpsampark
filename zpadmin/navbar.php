@@ -23,30 +23,43 @@
 		 	<div class="collapse navbar-collapse" id="myNavbar">
 		 		<ul class="nav navbar-nav navbar-right">
 		 			<li class="active"><a href="index.php">Home</a></li>
-		 			<li><a href="assignpassword.php">Password Permission</a></li>
-		 			<li class="dropdown">
-		 				<a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 15px">Add
-		 					<span class="caret"></span>
-		 				</a>
-		 				<ul class="dropdown-menu" style="background-color: transparent;">
-		 					<li><a href="adduser.php" style="font-size: 15px;color: black;"><b>Add User</b></a></li>
-		 					<li><a href="addtaluk.php" style="font-size: 15px;color: black;"><b>Taluk</b></a></li>
-		 					<li><a href="addvillage.php" style="font-size: 15px;color: black;"><b>Village</b></a></li>
-		 					<li><a href="addproject.php" style="font-size: 15px;color: black;"><b>Project</b></a></li>
-		 				</ul>
-		 			</li>
-		 			<li class="dropdown">
-		 				<a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 15px">View
-		 					<span class="caret"></span>
-		 				</a>
-		 				<ul class="dropdown-menu" style="background-color: transparent;">
-		 					<li><a href="viewuser.php" style="font-size: 15px;color: black;"><b>Users</b></a></li>
-		 					<li><a href="viewtaluk.php" style="font-size: 15px;color: black;"><b>Taluk</b></a></li>
-		 					<li><a href="viewvillage.php" style="font-size: 15px;color: black;"><b>Village</b></a></li>
-		 					<li><a href="viewprojects.php" style="font-size: 15px;color: black;"><b>Project</b></a></li>
-		 					<li><a href="viewreport.php" style="font-size: 15px;color: black;"><b>Monthly report</b></a></li>
-		 				</ul>
-		 			</li>
+		 			<?php
+		 				if ($privilege==4) {
+		 					?>
+		 						<li><a href="assignpassword.php">Password Permission</a></li>
+		 						<li class="dropdown">
+					 				<a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 15px">Add
+					 					<span class="caret"></span>
+					 				</a>
+					 				<ul class="dropdown-menu" style="background-color: transparent;">
+					 					<li><a href="adduser.php" style="font-size: 15px;color: black;"><b>Add User</b></a></li>
+					 					<li><a href="addtaluk.php" style="font-size: 15px;color: black;"><b>Taluk</b></a></li>
+					 					<li><a href="addvillage.php" style="font-size: 15px;color: black;"><b>Village</b></a></li>
+					 					<li><a href="addproject.php" style="font-size: 15px;color: black;"><b>Project</b></a></li>
+					 				</ul>
+					 			</li>
+					 		<?php
+		 				}
+		 			?>
+		 			<?php
+		 				if ($privilege==3) {
+		 					?>
+		 						<li class="dropdown">
+					 				<a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 15px">View
+					 					<span class="caret"></span>
+					 				</a>
+					 				<ul class="dropdown-menu" style="background-color: transparent;">
+					 					<li><a href="viewuser.php" style="font-size: 15px;color: black;"><b>Users</b></a></li>
+					 					<li><a href="viewtaluk.php" style="font-size: 15px;color: black;"><b>Taluk</b></a></li>
+					 					<li><a href="viewvillage.php" style="font-size: 15px;color: black;"><b>Village</b></a></li>
+					 					<li><a href="viewprojects.php" style="font-size: 15px;color: black;"><b>Project</b></a></li>
+					 					<li><a href="viewreport.php" style="font-size: 15px;color: black;"><b>Village report</b></a></li>
+					 					<li><a href="viewtalukreport.php" style="font-size: 15px;color: black;"><b>Taluk report</b></a></li>
+					 				</ul>
+					 			</li>
+					 		<?php
+		 				}
+		 			?>
 		 			<li class="dropdown">
 		 				<a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 15px"><b>Hello <?php echo $username; ?>
 		 					</b>

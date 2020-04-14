@@ -73,9 +73,10 @@ h1
 					<div class="col-sm-9">
 						<select name="ptype" class="form-control" id="ptype" required="" style="background-color: transparent;" ng-model="ptype" onchange="send(this.value)">
 							<option value="" disabled selected> SELECT PANCHAYAT TYPE</option>
-							<option value="gp">Gram Panchayat</option><!-- 
-							<option value="tp">Taluk Panchayat</option> -->
+							<option value="gp">Gram Panchayat</option>
+							<option value="tp">Taluk Panchayat</option>
 							<option value="zp">Zilla Panchayat</option>
+							<option value="ad">ADMIN</option>
 						</select>
 					</div>
 				</div><br>				

@@ -52,8 +52,11 @@
 										elseif ($row["privilege"]==2) {
 											$ptype="TP";
 										}
-										else{
+										elseif ($row["privilege"]==3) {
 											$ptype="ZP";
+										}
+										else{
+											$ptype="ADMIN";
 										}
 										echo "<tr style='background-color:transparent;'><td>".$row["id"]."</td><td>".$ptype."</td><td>".$row["pcode"]."</td><td>".$row["desig"]."</td><td>".$row["name"]."</td><td>".$row["gender"]."</td><td>".$row["email"]."</td><td>".$row["phone"]."</td><td>".$row["address"]."</td></tr>";
 									}

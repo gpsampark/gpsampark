@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 10, 2020 at 02:58 PM
+-- Generation Time: Apr 14, 2020 at 07:20 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.20
 
@@ -43,10 +43,12 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `name`, `gender`, `email`, `phone`, `address`, `privilege`, `pcode`, `desig`) VALUES
-(6, 'Roopa', 'Female', 'roopa@gmail.com', '7204993889', 'Karajaga						                                                                                    ', 3, 1517, 'comp opertr'),
-(8, 'pooja', 'Female', 'abcdef@cd.com', '234756', 'gfh hgvf hjfv vfkuj						', 2, 1517001, 'tp head'),
+(6, 'ABCDE', 'Male', 'abcde@gmail.com', '1234567890', 'hassan', 3, 1517, 'comp opertr'),
+(8, 'tp admin', 'Female', 'tpadmin@cd.com', '234756', 'gfh hgvf hjfv vfkuj						', 2, 1517001, 'tp head'),
 (9, 'nayana', 'Male', 'nayana@gmail.com', '23465875', 'hgskhtjg jhkdgs rhjd rskjhg 						                                    ', 1, 1517001001, 'Attender'),
-(10, 'Pooka K N', 'Female', 'poojakn@gmail.com', '7536374647', 'xdfghbkshnd kjhl', 1, 1517001002, 'abcde');
+(10, 'Pooka K N', 'Female', 'poojakn@gmail.com', '7536374647', 'xdfghbkshnd kjhl', 1, 1517001002, 'abcde'),
+(11, 'gowthami', 'Female', 'gowthami@gmail.com', '8543476253', 'sjfde jhseg ayhgwa uiyg', 1, 1517002001, 'ahvj '),
+(12, 'ADMIN', 'Male', 'sysadmin@gmail.com', '7865434567', 'sm,ndbfk  bsdjkbfjhsagdijyh', 4, 1515, 'System Admin');
 
 -- --------------------------------------------------------
 
@@ -92,7 +94,17 @@ CREATE TABLE `expenditure` (
 
 INSERT INTO `expenditure` (`exp_id`, `user_id`, `gp_code`, `project_id`, `rem_processing`, `cur_processing`, `rem_completed`, `cur_completed`, `month`, `year`) VALUES
 (5, 9, 1517001001, 2, 1, 2, 3, 4, 4, 2020),
-(6, 9, 1517001001, 9, 5, 6, 7, 8, 4, 2020);
+(6, 9, 1517001001, 9, 5, 6, 7, 8, 4, 2020),
+(7, 9, 1517001001, 2, 2, 3, 4, 5, 1, 2012),
+(8, 9, 1517001001, 9, 6, 7, 8, 9, 1, 2012),
+(9, 10, 1517001002, 2, 5, 6, 7, 8, 1, 2012),
+(10, 10, 1517001002, 9, 4, 3, 5, 6, 1, 2012),
+(11, 10, 1517001002, 2, 6, 7, 8, 5, 4, 2020),
+(12, 10, 1517001002, 9, 3, 3, 5, 6, 4, 2020),
+(13, 11, 1517002001, 2, 8, 7, 6, 4, 1, 2012),
+(14, 11, 1517002001, 9, 5, 6, 8, 4, 1, 2012),
+(15, 11, 1517002001, 2, 9, 4, 6, 7, 4, 2020),
+(16, 11, 1517002001, 9, 3, 8, 6, 5, 4, 2020);
 
 -- --------------------------------------------------------
 
@@ -112,8 +124,12 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`id`, `username`, `password`, `privilege`) VALUES
-(6, 'admin', 'admin', 3),
-(9, 'nayana', '1234', 1);
+(12, 'admin', 'admin', 4),
+(11, 'gowthami', 'gowthami', 1),
+(9, 'nayana', 'nayana', 1),
+(10, 'pooja', 'pooja', 1),
+(6, 'sharmila', 'sharmila', 3),
+(8, 'tpadmin', 'tpadmin', 2);
 
 -- --------------------------------------------------------
 
@@ -136,8 +152,7 @@ CREATE TABLE `project_list` (
 INSERT INTO `project_list` (`pid`, `slno`, `project_name`, `visibility`, `uid`) VALUES
 (1, '1.', 'Individual Works', 0, 6),
 (2, '1.a.', 'Land Development', 1, 6),
-(9, '5.', 'Cemetery Development', 1, 6),
-(10, '6.', 'Our Village, Our water', 0, 6);
+(9, '5.', 'Cemetery Development', 1, 6);
 
 -- --------------------------------------------------------
 
@@ -249,17 +264,17 @@ ALTER TABLE `village_list`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `expenditure`
 --
 ALTER TABLE `expenditure`
-  MODIFY `exp_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `exp_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `project_list`
 --
 ALTER TABLE `project_list`
-  MODIFY `pid` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `pid` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- Constraints for dumped tables
 --

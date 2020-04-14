@@ -21,6 +21,7 @@ h1
   border-left: 6px solid #2196F3;
 }
 
+
 </style>
 <body class="bg">
 	<?php include 'navbar.php'; ?>

@@ -22,7 +22,7 @@
 			<div class="container" style="border:solid thin black;border-radius: 10px;">
 				<form  class="form-horizontal w3-animate-zoom" action="viewreport.php" method="POST">
 
-				<h2 class="well well-sm" style="background-color:transparent; animation-duration: 3s;text-shadow:1px 1px 0 #444;text-align: center;"><b>MONTHLY EXPENDITURE</b></h2><br>
+				<h2 class="well well-sm" style="background-color:transparent; animation-duration: 3s;text-shadow:1px 1px 0 #444;text-align: center;"><b>MONTHLY VILLAGE EXPENDITURE</b></h2><br>
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="month">Month:</label>
 					<div class="col-sm-9">
@@ -78,8 +78,8 @@
 					</div><br> -->
 					<div class="panel-body">
 						<div class="form-group">
-							<label for="title">Select Taluk:</label>
-							<select name="taluk" class="form-control">
+							<label class="control-label col-sm-2" for="title">Select Taluk:</label>
+							<select class="col-sm-9" name="taluk" class="form-control">
 								<option value="">--- Select Taluk ---</option>
 									<?php
 										ini_set('display_errors', 1);
@@ -107,8 +107,8 @@
 				            </select>
 				        </div>
 				        <div class="form-group">
-				        	<label for="title">Select Village:</label>
-			        		<select name="gp_code" class="form-control" style="width:350px">
+				        	<label class="control-label col-sm-2" for="title">Select Village:</label>
+			        		<select class="col-sm-9" name="gp_code" class="form-control" style="width:350px">
 			        			
 			        		</select>
 				        </div>
@@ -140,10 +140,9 @@
 									<?php
 									while ($row= $result-> fetch_assoc()) {
 										$total=$row['rem_processing']+$row['rem_completed']+$row['cur_processing']+$row['cur_completed'];
-										echo "<tr><td>".$row['slno']."</td><td>".$row['project_name']."</td><td>".$row['rem_processing']."</td><td>".$row['cur_processing']."</td><td>".$row['rem_completed']."</td><td>".$row['cur_completed']."</td>
-												<td style='text-align:right;'>".$total."</td></tr>";
-											}
-										echo "</tbody></table>";
+										echo "<tr><td>".$row['slno']."</td><td>".$row['project_name']."</td><td>".$row['rem_processing']."</td><td>".$row['cur_processing']."</td><td>".$row['rem_completed']."</td><td>".$row['cur_completed']."</td><td style='text-align:right;'>".$total."</td></tr>";
+									}
+									echo "</tbody></table>";
 								}
 								else{
 									echo "000 result";
