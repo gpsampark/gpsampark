@@ -55,6 +55,7 @@
 					 					<li><a href="viewprojects.php" style="font-size: 15px;color: black;"><b>Project</b></a></li>
 					 					<li><a href="viewreport.php" style="font-size: 15px;color: black;"><b>Village report</b></a></li>
 					 					<li><a href="viewtalukreport.php" style="font-size: 15px;color: black;"><b>Taluk report</b></a></li>
+					 					<li><a href="viewdistrictreport.php" style="font-size: 15px;color: black;"><b>District report</b></a></li>
 					 				</ul>
 					 			</li>
 					 		<?php
