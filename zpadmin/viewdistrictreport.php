@@ -107,7 +107,7 @@
                   <?php
                   while ($row= $result-> fetch_assoc()) {
                     $code=$row['pid'];
-                    $sql="select * from expenditure,project_list,village_list,taluk_list,district_list where expenditure.gp_code=village_list.gp_code and village_list.tp_code=taluk_list.tp_code and project_id=pid and district_list.zp_code=taluk_list.zp_code and district_list.zp_code='".$zp_code."' and project_list.pid='".$code."' and month='".$month."' and year='".$year."'";
+                    $sql="select * from expenditure,project_list,village_list,taluk_list,district_list  where expenditure.gp_code=village_list.gp_code and village_list.tp_code=taluk_list.tp_code and project_id=pid and district_list.zp_code=taluk_list.zp_code and district_list.zp_code='".$zp_code."' and project_list.pid='".$code."' and month='".$month."' and year='".$year."'";
                     $result1=mysqli_query($conn, $sql);
                     if ($result1-> num_rows >0) {
                       $slno;

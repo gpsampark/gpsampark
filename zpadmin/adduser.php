@@ -22,7 +22,7 @@ h1
 	{
 
 		var input = document.getElementById('pcode').value;
-		var aRGEX = /^(([0-9]{10})|([0-9]{4}))$/;
+		var aRGEX = /^(([0-9]{10})|([0-9]{4})|([0-9]{7}))$/;
 		var Result = aRGEX.test(input);
 		if (Result == false) {
 			alert("Enter Valid Panchayat Code:"+Result );
