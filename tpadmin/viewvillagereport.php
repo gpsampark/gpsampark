@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Gramsampark | View report</title>
+  <title>Gramsampark | View Village report</title>
 </head>
 
 	<body class="bg">
@@ -70,12 +70,6 @@
 							</select>
 						</div>
 					</div>
-					<!-- <div class="form-group">
-						<label class="control-label col-sm-2" for="gp_code">Panchayat Code:</label>
-						<div class="col-sm-9">
-							<input type="number" style="background-color: transparent;" name="gp_code" class="form-control" required="" id="gp_code" placeholder="Enter Panchayat Code">
-						</div>
-					</div><br> -->
 					<div class="panel-body">
 						<div class="form-group">
 							<label class="control-label col-sm-2" for="gp_code">Select Taluk:</label>

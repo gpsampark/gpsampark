@@ -25,6 +25,7 @@
 		 			<li class="active"><a href="index.php">Home</a></li>
 		 			<li><a href="viewvillagereport.php">View Village Report</a></li>
 		 			<li><a href="viewtalukreport.php">View Taluk Report</a></li>
+		 			<li><a href="viewupdatestatus.php">View Update Status</a></li>
 		 			<li class="dropdown">
 		 				<a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 15px"><b>Hello <?php echo $username; ?>
 		 					</b>
