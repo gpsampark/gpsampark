@@ -4,6 +4,18 @@
   <title>Gramsampark | View report</title>
 </head>
 	<body>
+		<script type="text/javascript">
+			function printDiv(divName) {
+			     var printContents = document.getElementById(divName).innerHTML;
+			     var originalContents = document.body.innerHTML;
+
+			     document.body.innerHTML = printContents;
+
+			     window.print();
+
+			     document.body.innerHTML = originalContents;
+			}
+		</script>
 		<?php
 			include 'navbar.php';
 			ini_set('display_errors', 1);
@@ -78,7 +90,12 @@
 		                 	<button type="submit" class="btn btn-info" name="submit">View</button>
 		                </div>
 		            </div>
-					<div class="table-responsive w3-animate-zoom">
+					<div class="table-responsive w3-animate-zoom" id="printableArea">
+						<style type="text/css">
+							table, th, td {
+								border: 1px solid black;
+							}
+						</style>
 						<table class="table table-bordered" style="color: black; font-weight: bold;">
 							<thead  style="text-align: center;">
 								<tr><td colspan="7">Monthly Progress Report of Projects implemented under Mahatma Gandhi National Rural Employment Scheme</td></tr>
@@ -90,26 +107,29 @@
 							<tbody>
 								<?php
 									if (isset($_POST['submit'])) {
-									$month =($_POST['month']);
-									$year =($_POST['year']);
-								
-									$sql="select * from expenditure,project_list where project_id=pid and gp_code='".$gp_code."' and month='".$month."' and year='".$year."' ORDER BY project_list.pid";
-									$result=mysqli_query($conn, $sql);
-									if ($result-> num_rows >0) {
-										while ($row= $result-> fetch_assoc()) {
-											$total=$row['rem_processing']+$row['rem_completed']+$row['cur_processing']+$row['cur_completed'];
-											echo "<tr><td>".$row['slno']."</td><td>".$row['project_name']."</td><td>".$row['rem_processing']."</td><td>".$row['cur_processing']."</td><td>".$row['rem_completed']."</td><td>".$row['cur_completed']."</td>
-												<td style='text-align:right;'>".$total."</td></tr>";
+										$month =($_POST['month']);
+										$year =($_POST['year']);
+									
+										$sql="select * from expenditure,project_list where project_id=pid and gp_code='".$gp_code."' and month='".$month."' and year='".$year."' ORDER BY project_list.pid";
+										$result=mysqli_query($conn, $sql);
+										if ($result-> num_rows >0) {
+											while ($row= $result-> fetch_assoc()) {
+												$total=$row['rem_processing']+$row['rem_completed']+$row['cur_processing']+$row['cur_completed'];
+												echo "<tr><td>".$row['slno']."</td><td>".$row['project_name']."</td><td>".$row['rem_processing']."</td><td>".$row['cur_processing']."</td><td>".$row['rem_completed']."</td><td>".$row['cur_completed']."</td>
+													<td style='text-align:right;'>".$total."</td></tr>";
+											}
 										}
+										else{
+											echo "000 result";
+										}
+										$conn-> close();
 									}
-									else{
-										echo "000 result";
-									}
-									$conn-> close();
-								}
 								?>
 							</tbody>
 						</table>
+						<div class="container" style="text-align: center;">
+							<button class="btn btn-info" onclick="printDiv('printableArea')">Print Expenditure</button>							
+						</div>
 					</div>
 				</form>
 			</div>
