@@ -43,18 +43,18 @@
 					<div class="col-sm-9">
 						<select name="month" class="form-control" id="month" required="" style="background-color: transparent;">
 							<option disabled selected>Choose Month</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-							<option value="6">6</option>
-							<option value="7">7</option>
-							<option value="8">8</option>
-							<option value="9">9</option>
-							<option value="10">10</option>
-							<option value="11">11</option>
-							<option value="12">12</option>
+							<option value="1">January</option>
+							<option value="2">February</option>
+							<option value="3">March</option>
+							<option value="4">April</option>
+							<option value="5">May</option>
+							<option value="6">June</option>
+							<option value="7">July</option>
+							<option value="8">August</option>
+							<option value="9">September</option>
+							<option value="10">October</option>
+							<option value="11">November</option>
+							<option value="12">December</option>
 						</select>
 					</div>
 				</div><br>
@@ -96,19 +96,22 @@
 								border: 1px solid black;
 							}
 						</style>
-						<table class="table table-bordered" style="color: black; font-weight: bold;">
-							<thead  style="text-align: center;">
-								<tr><td colspan="7">Monthly Progress Report of Projects implemented under Mahatma Gandhi National Rural Employment Scheme</td></tr>
-								<tr><td colspan="2"><?php echo $row1['village_name']; ?></td><td colspan="5">Rupees in Lakhs</td></tr>
-								<tr><td rowspan="3">Sl.No</td><td rowspan="3">Project Name</td><td colspan="5">Progress until</td></tr>
-								<tr><td colspan="2">Processing</td><td colspan="2">Completed</td><td rowspan="2">Total Expenditure(Rupees in Lakhs)</td></tr>
-								<td>Remaining(Cont projects)</td><td>Current(New Projects)</td><td>Remaining(Cont. projects)</td><td>Current(New Projects)</td>
-							</thead>
-							<tbody>
+						
 								<?php
 									if (isset($_POST['submit'])) {
 										$month =($_POST['month']);
 										$year =($_POST['year']);
+										?>
+											<table class="table table-bordered" style="color: black; font-weight: bold;">
+												<thead  style="text-align: center;">
+													<tr><td colspan="7">Monthly Progress Report of Projects implemented under Mahatma Gandhi National Rural Employment Scheme</td></tr>
+													<tr><td colspan="2"><?php echo $row1['village_name']; ?></td><td colspan="5">Rupees in Lakhs</td></tr>
+													<tr><td rowspan="3">Sl.No</td><td rowspan="3">Project Name</td><td colspan="5"><?php echo $month."/".$year; ?></td></tr>
+													<tr><td colspan="2">Processing</td><td colspan="2">Completed</td><td rowspan="2">Total Expenditure(Rupees in Lakhs)</td></tr>
+													<td>Remaining(Cont projects)</td><td>Current(New Projects)</td><td>Remaining(Cont. projects)</td><td>Current(New Projects)</td>
+												</thead>
+												<tbody>
+										<?php
 									
 										$sql="select * from expenditure,project_list where project_id=pid and gp_code='".$gp_code."' and month='".$month."' and year='".$year."' ORDER BY project_list.pid";
 										$result=mysqli_query($conn, $sql);
