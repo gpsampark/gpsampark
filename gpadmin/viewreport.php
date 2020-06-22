@@ -131,7 +131,7 @@
 							</tbody>
 						</table>
 						<div class="container" style="text-align: center;">
-							<button class="btn btn-info" onclick="printDiv('printableArea')">Print Expenditure</button>							
+							<button class="btn btn-info" onclick="printDiv('printableArea')">Print Expenditure</button>			
 						</div>
 					</div>
 				</form>

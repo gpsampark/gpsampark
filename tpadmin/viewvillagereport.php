@@ -5,6 +5,18 @@
 </head>
 
 	<body class="bg">
+		<script type="text/javascript">
+			function printDiv(divName) {
+			     var printContents = document.getElementById(divName).innerHTML;
+			     var originalContents = document.body.innerHTML;
+
+			     document.body.innerHTML = printContents;
+
+			     window.print();
+
+			     document.body.innerHTML = originalContents;
+			}
+		</script>
 		<?php
 			include 'navbar.php';
 			ini_set('display_errors', 1);
@@ -112,7 +124,12 @@
 		                 	<button type="submit" class="btn btn-info" name="submit">View</button>
 		                </div>
 		            </div>
-					<div class="table-responsive w3-animate-zoom">
+					<div class="table-responsive w3-animate-zoom" id="printableArea">
+						<style type="text/css">
+							table, th, td {
+								border: 1px solid black;
+							}
+						</style>
 						<?php
 							if (isset($_POST['submit'])) {
 								$month =($_POST['month']);
@@ -144,6 +161,9 @@
 								$conn-> close();
 							}
 						?>
+					</div>
+					<div class="container" style="text-align: center;">
+						<button class="btn btn-info" onclick="printDiv('printableArea')">Print Expenditure</button>			
 					</div>
 				</form>
 			</div>
