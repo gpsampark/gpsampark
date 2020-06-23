@@ -31,7 +31,7 @@
       include 'navbar.php';
     ?>
     <div class="container">
-              <h1 align="center" class="w3-animate-top">Add Taluk Detail</h1><br>
+              <h1 align="center" class="w3-animate-top">Add New Taluk</h1><br>
               <form  class="form-horizontal w3-animate-zoom" action="addtalukscript.php" method="POST" onsubmit="return validate()">
                 <div class="form-group">
                    <label class="control-label col-sm-2" for="zp_code">District Code(ZP_code):</label>
@@ -67,7 +67,7 @@
                    <div class="form-group">
                   <label class="control-label col-sm-2" for="tp_code">Taluk Code:</label>
                   <div class="col-sm-9">
-                    <input type="text" name="tp_code" style="background-color: transparent;" class="form-control" id="tp_code" placeholder="Enter Taluk Code(tp_code)" required="">
+                    <input type="text" name="tp_code" style="background-color: transparent;" class="form-control" id="tp_code" placeholder="Enter Taluk Code(tp_code)" required="" value="">
                   </div>
                 </div><br>
                   <div class="form-group">

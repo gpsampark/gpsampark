@@ -58,7 +58,7 @@ else {
 
 <!DOCTYPE html>
 <html>
-<title>Login</title>
+<title>Change Password</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- <link rel="stylesheet" href="w3.css"> -->
 
@@ -103,7 +103,7 @@ include('navbar.php');
   <form action="changepassword.php" method="POST">
   <div class="input-group" style="padding-left: 25px;padding-right: 25px">
     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-    <input  type="text" class="form-control input-lg" name="username" placeholder="Username" id="username" required="" style="background-color: transparent;" value="<?php echo "$username"; ?>">
+    <input  type="text" class="form-control input-lg" name="username" placeholder="Username" id="username" required="" style="background-color: transparent;" value="<?php echo "$username"; ?>" disabled>
 </div><br><br>
 
   <div class="input-group" style="padding-left: 25px;padding-right: 25px">

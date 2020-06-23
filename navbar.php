@@ -20,6 +20,7 @@
 		 	<div class="collapse navbar-collapse" id="myNavbar">
 		 		<ul class="nav navbar-nav navbar-right">
 		 			<li class="active"><a href="index.php">Home</a></li>
+		 			<li><a href="#">About Us</a></li>
 		 			<li><a href="login.php">Login</a></li>
 		 		</ul>
 		 	</div>

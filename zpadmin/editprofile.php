@@ -77,7 +77,7 @@ h1
   <?php include 'navbar.php'; ?>
   <div class="container-fluid">
     <div  class="container" style="width: 70%;background-color: transparent;  color: black; border:solid thin black;border-radius: 10px;">
-      <h1 align="center" class="w3-animate-top">Add User Details</h1><br>
+      <h1 align="center" class="w3-animate-top">Edit Profile</h1><br>
       <form  class="form-horizontal w3-animate-zoom" action="editprofile.php" method="POST">
         <div class="form-group">
           <label class="control-label col-sm-2" for="desig">Designation:</label>

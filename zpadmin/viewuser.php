@@ -42,7 +42,7 @@
 				    			die("Connection failed: ");
 								}
 
-								$sql="select * from admin";
+								$sql="select * from admin order by id desc";
 								$result=mysqli_query($conn, $sql);
 								if ($result-> num_rows >0) {
 									while ($row= $result-> fetch_assoc()) {

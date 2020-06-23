@@ -51,7 +51,7 @@ h1
 				</div><br>				
 				<div class="form-group">
 					<div class="container" align="center">
-						<button type="submit" class="btn btn-info" name="submit">Assign</button>
+						<button type="submit" class="btn btn-primary" name="submit">Assign</button>
 					</div>
 				</div>
 			</form>

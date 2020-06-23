@@ -27,6 +27,7 @@
 		 				if ($privilege==4) {
 		 					?>
 		 						<li><a href="assignpassword.php">Password Permission</a></li>
+		 						<li><a href="viewuser.php"><b>Users</b></a></li>
 		 						<li class="dropdown">
 					 				<a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 15px">Add
 					 					<span class="caret"></span>
@@ -49,7 +50,6 @@
 					 					<span class="caret"></span>
 					 				</a>
 					 				<ul class="dropdown-menu" style="background-color: transparent;">
-					 					<li><a href="viewuser.php" style="font-size: 15px;color: black;"><b>Users</b></a></li>
 					 					<li><a href="viewtaluk.php" style="font-size: 15px;color: black;"><b>Taluk</b></a></li>
 					 					<li><a href="viewvillage.php" style="font-size: 15px;color: black;"><b>Village</b></a></li>
 					 					<li><a href="viewprojects.php" style="font-size: 15px;color: black;"><b>Project</b></a></li>
@@ -58,6 +58,7 @@
 					 					<li><a href="viewdistrictreport.php" style="font-size: 15px;color: black;"><b>District report</b></a></li>
 					 				</ul>
 					 			</li>
+					 			<li><a href="editexpenditure.php"><b>Edit Expenditure</b></a></li>
 					 		<?php
 		 				}
 		 			?>
