@@ -5,18 +5,6 @@
 </head>
 
 	<body class="bg">
-		<script type="text/javascript">
-			function printDiv(divName) {
-			     var printContents = document.getElementById(divName).innerHTML;
-			     var originalContents = document.body.innerHTML;
-
-			     document.body.innerHTML = printContents;
-
-			     window.print();
-
-			     document.body.innerHTML = originalContents;
-			}
-		</script>
 		<?php
 			include 'navbar.php';
 			ini_set('display_errors', 1);
@@ -32,7 +20,7 @@
 		?>
 		<div class="container-fluid">
 			<div class="container" style="border:solid thin black;border-radius: 10px;">
-				<form  class="form-horizontal w3-animate-zoom" action="viewreport.php" method="POST">
+				<form  class="form-horizontal w3-animate-zoom" action="editexpenditure.php" method="POST">
 
 				<h2 class="well well-sm" style="background-color:transparent; animation-duration: 3s;text-shadow:1px 1px 0 #444;text-align: center;"><b>MONTHLY VILLAGE EXPENDITURE</b></h2><br>
 				<div class="form-group">
@@ -91,7 +79,7 @@
 					<div class="panel-body">
 						<div class="form-group">
 							<label class="control-label col-sm-2" for="title">Select Taluk : </label>
-							<select class="col-sm-9" name="taluk" class="form-control">
+							<select class="col-sm-9" name="taluk" class="form-control" required="">
 								<option value="">--- Select Taluk ---</option>
 									<?php
 										ini_set('display_errors', 1);
@@ -120,7 +108,7 @@
 				        </div>
 				        <div class="form-group">
 				        	<label class="control-label col-sm-2" for="title">Select Village:</label>
-			        		<select class="col-sm-9" name="gp_code" class="form-control" style="width:350px">
+			        		<select class="col-sm-9" name="gp_code" class="form-control" style="width:350px" required="">
 			        			
 			        		</select>
 				        </div>
@@ -130,6 +118,8 @@
 		                 	<button type="submit" class="btn btn-info" name="submit">View</button>
 		                </div>
 		            </div>
+		        </form>
+		        <form  class="form-horizontal w3-animate-zoom" method="POST">
 					<div class="table-responsive w3-animate-zoom" id="printableArea">
 						<style type="text/css">
 							table, th, td {
@@ -155,11 +145,19 @@
 										</thead>
 										<tbody>
 									<?php
+									$i=0;
+									$expid;
+									$rp;
 									while ($row= $result-> fetch_assoc()) {
 										$total=$row['rem_processing']+$row['rem_completed']+$row['cur_processing']+$row['cur_completed'];
-										echo "<tr><td>".$row['slno']."</td><td>".$row['project_name']."</td><td>".$row['rem_processing']."</td><td>".$row['cur_processing']."</td><td>".$row['rem_completed']."</td><td>".$row['cur_completed']."</td><td style='text-align:right;'>".$total."</td></tr>";
+										echo "<tr style='text-align:center;'><td>".$row['slno']."</td><td>".$row['project_name']."</td><td><input type='hidden' name='expid[<?php echo $i; ?>]' value='".$row['exp_id']."'><input type='text' name='rp[<?php echo $i; ?>]' value='".$row['rem_processing']."' size='5'></td><td><input type='text' name='cp[<?php echo $i; ?>]' value='".$row['cur_processing']."' size='5'></td><td><input type='text' name='rc[<?php echo $i; ?>]' value='".$row['rem_completed']."' size='5'></td><td><input type='text' name='cc[<?php echo $i; ?>]' value='".$row['cur_completed']."' size='5'></td><td style='text-align:right;'>".$total."</td></tr>";
+										$i++;
 									}
-									echo "</tbody></table>";
+									echo "</tbody></table>";?>
+									<div class="container" style="text-align: center;">
+										<a href="editdata.php?expid=&rp=">Update Expenditure</a>	
+									</div>
+									<?php
 								}
 								else{
 									echo "000 result";
@@ -168,9 +166,7 @@
 							}
 						?>
 					</div>
-					<div class="container" style="text-align: center;">
-						<button class="btn btn-info" onclick="printDiv('printableArea')">Print Expenditure</button>			
-					</div>
+					
 				</form>
 			</div>
 		</div>
