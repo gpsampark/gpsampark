@@ -20,7 +20,7 @@
 		?>
 		<div class="container-fluid">
 			<div class="container" style="border:solid thin black;border-radius: 10px;">
-				<form  class="form-horizontal w3-animate-zoom" action="editexpenditure.php" method="POST">
+				<form  class="form-horizontal w3-animate-zoom" action="editdata.php" method="POST">
 
 				<h2 class="well well-sm" style="background-color:transparent; animation-duration: 3s;text-shadow:1px 1px 0 #444;text-align: center;"><b>MONTHLY VILLAGE EXPENDITURE</b></h2><br>
 				<div class="form-group">
@@ -119,55 +119,7 @@
 		                </div>
 		            </div>
 		        </form>
-		        <form  class="form-horizontal w3-animate-zoom" method="POST">
-					<div class="table-responsive w3-animate-zoom" id="printableArea">
-						<style type="text/css">
-							table, th, td {
-								border: 1px solid black;
-							}
-						</style>
-						<?php
-							if (isset($_POST['submit'])) {
-								$month =($_POST['month']);
-								$year =($_POST['year']);
-								$gp_code=($_POST['gp_code']);
-								$sql="select * from expenditure,project_list,village_list where expenditure.gp_code=village_list.gp_code and project_id=pid and expenditure.gp_code='".$gp_code."' and month='".$month."' and year='".$year."' ORDER BY project_list.pid";
-								$result=mysqli_query($conn, $sql);
-								if ($result-> num_rows >0) {
-									?>
-									<table class="table table-bordered" style="color: black; font-weight: bold;">
-										<thead  style="text-align: center;">
-											<tr><td colspan="7">Monthly Progress Report of Projects implemented under Mahatma Gandhi National Rural Employment Scheme</td></tr>
-											<tr><td colspan="2"></td><td colspan="5">Rupees in Lakhs</td></tr>
-											<tr><td rowspan="3">Sl.No</td><td rowspan="3">Project Name</td><td colspan="5">Progress until</td></tr>
-											<tr><td colspan="2">Processing</td><td colspan="2">Completed</td><td rowspan="2">Total Expenditure(Rupees in Lakhs)</td></tr>
-											<td>Remaining(Cont projects)</td><td>Current(New Projects)</td><td>Remaining(Cont. projects)</td><td>Current(New Projects)</td>
-										</thead>
-										<tbody>
-									<?php
-									$i=0;
-									$expid;
-									$rp;
-									while ($row= $result-> fetch_assoc()) {
-										$total=$row['rem_processing']+$row['rem_completed']+$row['cur_processing']+$row['cur_completed'];
-										echo "<tr style='text-align:center;'><td>".$row['slno']."</td><td>".$row['project_name']."</td><td><input type='hidden' name='expid[<?php echo $i; ?>]' value='".$row['exp_id']."'><input type='text' name='rp[<?php echo $i; ?>]' value='".$row['rem_processing']."' size='5'></td><td><input type='text' name='cp[<?php echo $i; ?>]' value='".$row['cur_processing']."' size='5'></td><td><input type='text' name='rc[<?php echo $i; ?>]' value='".$row['rem_completed']."' size='5'></td><td><input type='text' name='cc[<?php echo $i; ?>]' value='".$row['cur_completed']."' size='5'></td><td style='text-align:right;'>".$total."</td></tr>";
-										$i++;
-									}
-									echo "</tbody></table>";?>
-									<div class="container" style="text-align: center;">
-										<a href="editdata.php?expid=&rp=">Update Expenditure</a>	
-									</div>
-									<?php
-								}
-								else{
-									echo "000 result";
-								}
-								$conn-> close();
-							}
-						?>
-					</div>
-					
-				</form>
+		        
 			</div>
 		</div>
 		<script>
