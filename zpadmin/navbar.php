@@ -18,7 +18,7 @@
 		 			<span class="icon-bar"></span>
 		 			<span class="icon-bar"></span>
 		 		</button>
-		 		<a class="nabar-brand" href="#"><img src="../img/gpslogo.png"></a>
+		 		<a class="nabar-brand" href="index.php"><img src="../img/gpslogo3.png"></a>
 		 	</div>
 		 	<div class="collapse navbar-collapse" id="myNavbar">
 		 		<ul class="nav navbar-nav navbar-right">
@@ -58,7 +58,7 @@
 					 					<li><a href="viewdistrictreport.php" style="font-size: 15px;color: black;"><b>District report</b></a></li>
 					 				</ul>
 					 			</li>
-					 			<li><a href="editexpenditure.php"><b>Edit Expenditure</b></a></li>
+					 			<li><a href="editexpenditure.php"><b>Update</b></a></li>
 					 		<?php
 		 				}
 		 			?>

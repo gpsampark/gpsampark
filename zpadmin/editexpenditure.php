@@ -22,7 +22,7 @@
 			<div class="container" style="border:solid thin black;border-radius: 10px;">
 				<form  class="form-horizontal w3-animate-zoom" action="editdata.php" method="POST">
 
-				<h2 class="well well-sm" style="background-color:transparent; animation-duration: 3s;text-shadow:1px 1px 0 #444;text-align: center;"><b>MONTHLY VILLAGE EXPENDITURE</b></h2><br>
+				<h2 class="well well-sm" style="background-color:transparent; animation-duration: 3s;text-shadow:1px 1px 0 #444;text-align: center;"><b>UPDATE VILLAGE EXPENDITURE</b></h2><br>
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="month">Month:</label>
 					<div class="col-sm-9">

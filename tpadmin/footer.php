@@ -2,7 +2,7 @@
 	<div class="row">
 		<div class="col-sm-4">
 			<h3>Contact</h3><br>
-			<h4><a href="https://www.google.com/maps/place/Zilla+Panchayat+Office/@13.002748,76.1011482,21z/data=!4m8!1m2!2m1!1shassan+zilla+panchayat!3m4!1s0x0:0x4aac46ebaed15343!8m2!3d13.002734!4d76.101697" target="_blank">B M Road, Rangoli Halla, Hassan, Karnataka 573201</a></h4>
+			<h4><a href="https://www.google.com/maps/place/Zilla+Panchayat+Office/@13.002748,76.1011482,21z/data=!4m8!1m2!2m1!1shassan+zilla+panchayat!3m4!1s0x0:0x4aac46ebaed15343!8m2!3d13.002734!4d76.101697" target="_blank" style="color: white">B M Road, Rangoli Halla, Hassan, Karnataka 573201</a></h4>
 		</div>
 		<div class="col-sm-4">
 			<h3>Connect</h3><br>

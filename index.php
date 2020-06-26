@@ -3,7 +3,7 @@
 <head>
 	<title>Gram Sampark</title>
 </head>
-<body>
+<body class="bg">
 	<?php include 'navbar.php';?>
 	<div style="
 	display: table;
